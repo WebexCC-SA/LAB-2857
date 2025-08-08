@@ -25,7 +25,7 @@ This is the interaction flow:
 1. Log in Control Hub with your admin user, go to **Services**, **Contact Center**:
 
     <p align="center">
-    <img src="images/cc-admin.png" alt="Contact Center Administration" width="150">
+    <img src="/images/cc-admin.png" alt="Contact Center Administration" width="150">
     </p>
 
     In the **Quick Links** section on the right, click on **Webex Connect** 
@@ -34,7 +34,7 @@ This is the interaction flow:
 2. Go to Services
 
    <p align="center">
-   <img src="images/services-new.png" alt="Webex Connect Services" width="450">
+   <img src="/images/services-new.png" alt="Webex Connect Services" width="450">
    </p>
 
 Select the Services for you POD, and click on the flow named '_Healthcare Main Flow_'

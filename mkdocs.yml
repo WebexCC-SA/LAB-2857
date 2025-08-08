@@ -87,11 +87,13 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Lab:
-      - Overview: overview.md
-      - Lab 1 - Getting Started: lab1_getting_started.md
-      - Conclusion: conclusion.md
-      - Styling and Advanced Features:
-        - Markdown and Other References: howToUse/references.md
-        - Custom Features: howToUse/customFeatures.md
-        - Custom Admonitions: howToUse/admonition.md
- 
+      - Introduction: 00-introduction.md
+      - Webex Instant Connect Overview: 01-overview.md
+      - Webex Connect configuration: 02-activation.md
+      - Webex Connect API: 03-instantconnectapi.md
+      - Building your Webex AI Agent: 04-ai-agent-create.md
+      - Backend Preparation: 05-backend.md
+      - Webex connect Flow, getting customer data from CRM: 06-connectflow-01.md
+      - Adding the Webex AI Agent to the main Flow: 07-connectflow-02-ai-agent.md
+      - Create and share Instant Connect Meeting Links: 08-connectflow-03-ic.md
+      - Testing the Flow: 09-testing-flow.md

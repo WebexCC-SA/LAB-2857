@@ -19,7 +19,7 @@ You can also configure Instant Connect appearance by adding your organization na
 2. Click on **Change Logo**, and use the pictures provided: [small](https://pubhub.devnetcloud.com/media/webex-connect-instant-connect/labs/images/hospital-logo-small.png) and [big](https://pubhub.devnetcloud.com/media/webex-connect-instant-connect/labs/images/hospital-logo-big.png).
 
 
-   <img src="images/ic-appearance.png" width="600">
+   <img src="/images/ic-appearance.png" width="600">
 
 3. Log in [Control Hub](https://admin.webex.com) as an administrator, and click on **Apps**
 
