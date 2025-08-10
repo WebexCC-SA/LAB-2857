@@ -3,7 +3,7 @@
 Welcome to the **How to improve customer interactions with video and AI** hands-on lab!
 
 <p align="center">
-    <img src="images/intro.png" alt="Session Details" width="900">
+    <img src="./images/intro.png" alt="Session Details" width="900">
 </p>
 
 
