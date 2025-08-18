@@ -12,9 +12,7 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
 2. Go the Node Pallette on the right side of teh screen, select the _AI Agent_ node:
 
-    <p align="center">
-        <img src="images/ai-agent-node.png" alt="AI Agent Node" width="300">
-    </p>
+     ![AI Agent Node](images/ai-agent-node.png){style="width:300px; display:block; margin:0 auto;"}
 
     and add it to the Canvas. Connect it to the Branch Node named 'Yes or No'
 
@@ -37,10 +35,7 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
     Depending on the order you followed during the lab, what you see on the screen might be slightly different. Normally, you will see the AI Agent node as the last one in the list of nodes on the right. Remember that you can always check the node numbers by clicking the **Debug** button
 
-    <p align="center">
-        <img src="images/debug.png" alt="Debug">
-    </p>
-
+    ![Debug](images/debug.png){style="width:80px; display:block; margin:0 auto;"}
 
 2. Select any of the Receive nodes that you already have in the flow, copy and paste it. Connect it the 'Agent Message' previous SMS Node.
 
