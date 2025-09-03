@@ -89,7 +89,7 @@ nav:
   - Lab Guide:
       - Introduction: 00-introduction.md
       - Webex Instant Connect Overview: 01-overview.md
-      - Webex Connect configuration: 02-activation.md
+      - Instant Connect configuration: 02-activation.md
       - Webex Connect API: 03-instantconnectapi.md
       - Building your Webex AI Agent: 04-ai-agent-create.md
       - Backend Preparation: 05-backend.md
