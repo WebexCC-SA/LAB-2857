@@ -86,7 +86,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
   - Home: index.md
-  - Lab:
+  - Lab Guide:
       - Introduction: 00-introduction.md
       - Webex Instant Connect Overview: 01-overview.md
       - Webex Connect configuration: 02-activation.md
