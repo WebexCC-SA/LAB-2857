@@ -22,87 +22,104 @@ This is the interaction flow:
 
 ## Get Customer Data from CRM
 
-1. Log in Control Hub (https://admin.webex.com) with you Webex Contact Center tenant administrator credentials, go to **Services**, **Contact Center**:
+1. Download [this flow](/docs/Healthcare%20Main%20Flow.workflow).
 
-    ![Contact Center Administration](images/cc-admin.png){style="width:150px; display:block; margin:0 auto;"}
+2. Log in Control Hub (https://admin.webex.com) with you Webex Contact Center tenant administrator credentials, go to **Services**, **Contact Center**:
 
-    In the **Quick Links** section on the right, click on **Webex Connect** 
+      ![Contact Center Administration](images/cc-admin.png){style="width:150px; display:block; margin:0 auto;"}
 
+      In the **Quick Links** section on the right, click on **Webex Connect** 
 
-2. Go to Services
+3. Go to Services
 
-    ![Webex Connect Services](images/services-new.png){style="width:600px; display:block; margin:0 auto;"}
+      ![Webex Connect Services](images/services-new.png){style="width:600px; display:block; margin:0 auto;"}
 
-Select the Services for you POD, and click on the flow named '_Healthcare Main Flow_'
+      Select the Services for you POD, and click on **Create a Flow**. From the **Method** drop down menu, choose _Upload a Flow_, and select the Flow that you downloaded.
+      For the Flow name, choose `Healthcare Main Flow`. Click on **Create**.
 
-3. Add an **HTTP Request** node to the canvas, and connect it to the first Node **Configure Webhook** . We will use this node to retrieve the customer name from the customers data base.
+4. Click on **Create new event**, and choose as **Name** `podX-main-flow` where X is your POD number.
 
-    - For **Method** select: `GET`
+5. In the **PROVIDE SAMPLE INPUT**, paste this:
 
-   - For **Endpoint URL**, type: 
+      ```js
+      {
+         "channel": "",
+         "mobileNumber": "",
+         "customerEmail": ""
+      }
       ```
-      $(crmAPIEndpoint)/customers/search/?mobileNumber=$(mobileNumber)&email=$(customerEmail)
-      ```
-   This is an example of the use of Variables inside Connect. You can access easily access them in the **Input Variables**, **Custom Variables** section on the right
 
-   - Configure your headers as in the following image
+      ![First Trigger Flow Node](images/first-node.png){style="width:700px; display:block; margin:0 auto;"}
 
-      ![Get Customer Name](images/http-request-crm.png)
-   
-   Where `x-pod-id` is your POD number, and `x-user-email`is the attendee email of your choice
+6. Click on **Parse** and **Save**
 
-   - Rename this http request node to something like 'Get Customer Name from CRM' and **Save**.
+7. Add an **HTTP Request** node to the canvas, and connect it to the first Node **Configure Webhook** . We will use this node to retrieve the customer name from the customers data base.
 
+      - For **Method** select: `GET`
 
-4. Add a **Data Parser** node, and connect it to the **HTTP Request Node**. This will allow you to parse the data received from the customer data base to be used later in any node in the flow.
-
-   - For **Input: Import Data From**: under the **Input Variables** section to the right, select the `http.response.body` variable from the previous **HTTP Request** node 'Get Customer Name From' configured in the previous step:
-
-    - Now, we will populate **Sample Body (optional)** with some JSON that exemplifies the data we expect to be parsing.
-
-        There are different ways to get such sample data. Usually, there are examples available on the documentation of the CRM/backend system you want to integrate with; or, you could use the 'Test' option of the http request node.
-        
-        Here, we will use this sample JSON:
-         ```  
-         {
-            "podId":"POD4",
-            "userEmail":"studentpod4@email.com",
-            "adminMode":false,
-            "searchCriteria": {
-               "email":"customerpod4@email.com",
-               "mobileNumber":"12225556666"
-            },
-            "searchScope":"user_customers",
-            "matchingCustomers":[{
-               "id":"791b0fe8-b5aa-4e18-8eb6-2076d3d20d8c",
-               "name":"Customer Pod4",
-               "email":"customerpod4@email.com",
-               "phone":"",
-               "mobileNumber":"12225556666",
-               "company":"",
-               "status":"active",
-               "createdBy":"studentpod4@email.com",
-               "createdAt":"2025-07-28T20:39:38.171Z",
-               "updatedAt":"2025-07-28T20:39:38.171Z"
-            }],
-            "totalMatches":1,
-            "totalSearched":1
-         }
+      - For **Endpoint URL**, type: 
          ```
-    
-        (The actual key values are not important, and could be anything or even empty.) 
-        
-        Copy/paste the JSON into the **Sample Body (optional) / PROVIDE SAMPLE INPUT** field, and click **PARSE**.
-        
-        Under **SELECT OUTPUT VARIABLES**, choose `$.matchingCustomers[0].name` anc click **Import**
-                
-    - Go ahead and give this variable the 'Output Variable Name' `customerName`
+         $(crmAPIEndpoint)/customers/search/?mobileNumber=$(mobileNumber)&email=$(customerEmail)
+         ```
+      This is an example of the use of Variables inside Connect. You can access easily access them in the **Input Variables**, **Custom Variables** section on the right
 
-        ![Data Parser Output](images/data-parser-output-crm..png)
-        
-    - Rename the node to 'Parse Response', and click on **Save**.
+      - Configure your headers as in the following image
 
-5. Let's learn now about a very powerful Webex Connect feature: how to modify variables.
+         ![Get Customer Name](images/http-request-crm.png){style="width:800px; display:block; margin:0 auto;"}
+      
+      Where `x-pod-id` is your POD number, and `x-user-email`is the attendee email of your choice
+
+      - Rename this http request node to something like 'Get Customer Name from CRM' and **Save**.
+
+8. Add a **Data Parser** node, and connect it to the **HTTP Request Node**. This will allow you to parse the data received from the customer data base to be used later in any node in the flow.
+
+      - For **Input: Import Data From**: under the **Input Variables** section to the right, select the `http.response.body` variable from the previous **HTTP Request** node 'Get Customer Name From' configured in the previous step:
+
+      - Now, we will populate **Sample Body (optional)** with some JSON that exemplifies the data we expect to be parsing.
+
+         There are different ways to get such sample data. Usually, there are examples available on the documentation of the CRM/backend system you want to integrate with; or, you could use the 'Test' option of the http request node.
+         
+         Here, we will use this sample JSON:
+            ```  
+            {
+               "podId":"POD4",
+               "userEmail":"studentpod4@email.com",
+               "adminMode":false,
+               "searchCriteria": {
+                  "email":"customerpod4@email.com",
+                  "mobileNumber":"12225556666"
+               },
+               "searchScope":"user_customers",
+               "matchingCustomers":[{
+                  "id":"791b0fe8-b5aa-4e18-8eb6-2076d3d20d8c",
+                  "name":"Customer Pod4",
+                  "email":"customerpod4@email.com",
+                  "phone":"",
+                  "mobileNumber":"12225556666",
+                  "company":"",
+                  "status":"active",
+                  "createdBy":"studentpod4@email.com",
+                  "createdAt":"2025-07-28T20:39:38.171Z",
+                  "updatedAt":"2025-07-28T20:39:38.171Z"
+               }],
+               "totalMatches":1,
+               "totalSearched":1
+            }
+            ```
+      
+         (The actual key values are not important, and could be anything or even empty.) 
+         
+         Copy/paste the JSON into the **Sample Body (optional) / PROVIDE SAMPLE INPUT** field, and click **PARSE**.
+         
+         Under **SELECT OUTPUT VARIABLES**, choose `$.matchingCustomers[0].name` anc click **Import**
+                  
+      - Go ahead and give this variable the 'Output Variable Name' `customerName`
+
+         ![Data Parser Output](images/data-parser-output-crm..png){style="width:800px; display:block; margin:0 auto;"}
+         
+      - Rename the node to 'Parse Response', and click on **Save**.
+
+9. Let's learn now about a very powerful Webex Connect feature: how to modify variables.
 
 - Double-click on this very same 'Parse Response' **Data Parser** node that we created, and select **Transaction Actions (Optional)**
 
@@ -117,9 +134,7 @@ Select the Services for you POD, and click on the flow named '_Healthcare Main F
 
 - Add another _On-leave_ Action, this time choose `[Debug] Log a Value to transaction log`. For the of `Log Id` you can use '1001', and `$(customerName)` for the value. This will help you troubleshooting the flow if needed.
 
-
-   ![Transaction Actions, CRM](images/trans-action-crm.png)
-
+   ![Transaction Actions, CRM](images/trans-action-crm.png){style="width:800px; display:block; margin:0 auto;"}
 
 Mission accomplished! Learn how to integrate Webex Connect with external databases
 
