@@ -14,34 +14,30 @@ In this lab we will use a bot token.
 
 ## Create your BOT
 
+1. Go to https://developer.webex.com/docs/bots, log is as a Webex administrator in your Webex Meetings Guest-2-Guest organization with the lab credentials provided, and click on **Start Building Apps** and **Create a Bot**
 
+2. Select a unique Bot name (for example 'Video Expert PODX' where X is your POD number), and an icon of your choice. 
 
-1. Go to https://developer.webex.com/docs/bots, log is as a Webex administrator in your org, and click on **Create a Bot**
+3. Choose your bot username, this has to be unique. For example, you could do something 'lab-wx1-PODX', where X is your POD number.
 
-2. Select your Bot name (for example 'Video Expert'), and an icon of your choice. 
-
-3. Choose your bot username, this has to be unique. For example, you could do something 'lab-wx1-_yourusername_'
-
-4. **App Hub Description**: we won't be publishing this bot to App Hub, but it is a good practice to add a meaningful description that will help you remember the purpose of the bot. For example, you can type something like '_This is the bot used for my wx1 lab 2857: 'Webex Connect with Instant Connect for video customer interactions_'
+4. **App Hub Description**: we won't be publishing this bot to App Hub, but it is a good practice to add a meaningful description that will help you remember the purpose of the bot. For example, you can type something like '_This is the bot used for my wx1 lab 2857_'
 
 5. Click on **Add Bot** and **Copy your token!!** to a safe place, we will use later:
 
 ![Bot token](images/bot-token.png)
 
-> Note: Remember that you need to use a Guest-to-Guest Webex Meeting site, as described in this lab Introduction
-
 ## Create the Meeting Links
 
 This section will provide meeting links for host (expert) and guest (end customer) users. You will use curl for this:
 
-1. Open a Terminal session
+1. Open a text editor.
 
-2. Copy/paste and run this command:
+2. Copy and paste:
 
     ```
     curl --location 'https://mtg-broker-a.wbx2.com/api/v2/joseencrypt' \
     --header 'Content-Type: application/json' \
-    --header 'Authorization: Bearer ZWJkZjc1Y2UtN2U3MS00MzkxLTljMzYtM2Q4MjNiYjczMDVmMjE2NjFjODctNDZm_P0A1_3e826b27-2854-4cef-90d7-47862c8eef5a' \
+    --header 'Authorization: Bearer YOUR_BOT_TOKEN_HERE' \
     --data '{
         "jwt": {
             "sub": "Instant Connect Meeting 5"
@@ -52,21 +48,34 @@ This section will provide meeting links for host (expert) and guest (end custome
         "loginUrlForHost": false
     }'
     ```
+
     Body details:
 
-   * `sub` (Subject) string value can be whatever you like as long as it is unique for each meeting.
+    * `sub` (Subject) string value can be whatever you like as long as it is unique for each meeting.
 
-   * `aud` indicates the audience for which the jwt is intended. In this case it is Cisco, and the value is always the same.
+    * `aud` indicates the audience for which the jwt is intended. In this case it is Cisco, and the value is always the same.
 
-   * `jwt` with `sub` and `aud` are mandatory parameters, the rest are optional.
+    * `jwt` with `sub` and `aud` are mandatory parameters, the rest are optional.
 
-   * `provideShortUrls`: Default: `false`. If set to `true`, the response will have shortened data portions of the meeting URL. It will also contain a shortened base URL, you will learn later how to use this data.
+    * `provideShortUrls`: Default: `false`. If set to `true`, the response will have shortened data portions of the meeting URL. It will also contain a shortened base URL, you will learn later how to use this data.
 
-   * `verticalType`: Default: `hc`. Currently takes two values, `gen` for general flow, and `hc` for healthcare flow.
+    * `verticalType`: Default: `hc`. Currently takes two values, `gen` for general flow, and `hc` for healthcare flow.
 
-   * `loginUrlForHost`: Default `true`. Relevant only if `provideShortUrls` is true. If set to `false`, the short URL for hosts will be non-login links which means the host won't have an option to login for the meeting.
+    * `loginUrlForHost`: Default `true`. Relevant only if `provideShortUrls` is true. If set to `false`, the short URL for hosts will be non-login links which means the host won't have an option to login for the meeting.
 
+
+3. Replace _YOUR_BOT_TOKEN_HERE_ with yor Bot Token.
+
+    If you are comfortable with command line:
+
+4. Select all the text that you have now in the text editor and copy it.
+
+5. Open a Terminal session
+
+6. Paste the content of the clipboard and and press enter
+    
     API response should be something like this:
+    
     ```js
     {
         "host": [
@@ -86,7 +95,22 @@ This section will provide meeting links for host (expert) and guest (end custome
     ```
     > **Note:** Response has been formatted to make the documentation more understandable
 
-    If you are not comfortable using the command line, there are other tools that you can use to create the request, such as Postman or Bruno, or https://httpie.io/app.
+    API Response may be difficult to read, but all the needed values should be there: _baseUrl_, _host.short_ and _guest.short_. If you prefer to use a more graphical tool, you can use Postman, Bruno, or https://httpie.io/app:
+
+1. Open a browser tab and go to https://httpie.io/app. Click on **Close**
+
+2. Go to the API Request URL field:
+
+    ![httpie](images/httpie.png)
+
+    and paste the content of your text editor. This should import the curl request into httpie. Click on **Update**
+
+3. You API Request should be now ready, click on **Send**:
+
+
+    ![Send API Request with httpie](images/httpie-send.png)
+
+The response is easy to read, let's see how to create the meeting links
 
 ## Construct the Meeting URLs
 
