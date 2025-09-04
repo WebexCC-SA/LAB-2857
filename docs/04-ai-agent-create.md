@@ -4,7 +4,7 @@ In this section you will learn how to create an Autonomous Webex AI Agent.
 
 ## Agent Creation
 
-1. Log in Control Hub with your admin user, go to **Services**, **Contact Center**:
+1. Log in Control Hub (https://admin.webex.com) with you Webex Contact Center tenant administrator credentials, go to **Services**, **Contact Center**:
 
     ![Contact Center Administration](images/cc-admin.png){style="width:150px; display:block; margin:0 auto;"}
 

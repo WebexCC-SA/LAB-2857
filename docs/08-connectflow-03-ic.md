@@ -131,13 +131,92 @@ Next we will use the [Webex messaging API](https://developer.webex.com/docs/api/
 
     Mission accomplished! Learn how to integrate Webex Connect with Instant Connect to create the Instant Connect Meetings Links, and share them with the customer and the expert.
 
-    ## SECTION FOR NON US ATTENDEES
+## SECTION FOR NON US ATTENDEES
 
-    If you do not have a US mobile number, you can still test your flow.
+If you do not have a US mobile number, you can still test your flow.
 
-    1. Go to the _Channel Selection_ **Branch Node**, and connect the 'Webex' outcome to the **HTTP Request Node** named _Reminder-Webex Channel_   
+1. Go to the _Channel Selection_ **Branch Node**, and connect the 'Webex' outcome to the **HTTP Request Node** named _Reminder-Webex Channel_   
 
 
-        ![Webex Option](images/webex-option-1.png)
+    ![Webex Option](images/webex-option-1.png)
 
-    The Webex AI Agent has been added in this WEbex flow branch for you, you do not need to to it again.
+The Webex AI Agent has been added in this Webex flow branch for you, you do not need to to it again.
+
+You need to follow some more steps in order to use Webex as the channel for this use case:
+
+2. At the left side menu bar, click on **Assets** and **Integrations** (Save your Flow first!)
+
+3. Click on **Add Integration** and choose **Inbound Webhook**
+
+4. Choose a unique name, for example _listener_podX_, where X is your POD number.
+
+5. Copy and Save the WebHook URL (we will use https://hooks.us.webexconnect.io/events/ASKAS3CYE5 in this example)
+
+6. Click on the **Paste JSON tab**, and paste:
+    ```js
+    {
+        "id": "",
+        "name": "",
+        "targetUrl": "",
+        "resource": "",
+        "event": "",
+        "orgId": "",
+        "createdBy": "",
+        "appId": "",
+        "ownedBy": "",
+        "status": "",
+        "created": "",
+        "actorId": "",
+        "data": {
+            "id": "",
+            "roomId": "",
+            "roomType": "",
+            "personId": "",
+            "personEmail": "",
+            "created": ""
+        }
+    }
+    ```
+
+7. Click on **Parse** and **Save**
+
+8. Create a Webhook associated to your Bot. This Webhook will be 'listening' to all the messages sent to the Bot
+    - Open a text editor, and paste:
+    ```
+        curl --request POST \
+        --url https://webexapis.com/v1/webhooks \
+        --header 'authorization: Bearer YOUR_BOT_TOKEN' \
+        --header 'content-type: application/json' \
+        --data '{
+        "name": "Webex listener PODX",
+        "targetUrl": "INBOUND_WEBHOOK_URL",
+        "resource": "messages",
+        "event": "created"
+        }'
+    ```
+    - Replace _YOUR_BOT_TOKEN_ with your bot Token and _INBOUND_WEBHOOK_URL_ with URL for the Inbund Webhook created above (https://hooks.us.webexconnect.io/events/ASKAS3CYE5 in this example)
+    - Select all the text that you have now in the text editor and copy it.
+    - Open a Terminal session.
+    - Paste the content of the clipboard and and press enter
+
+    You should get a response similar to  this: 
+
+    ```js
+    {"id":"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1dFQkhPT0svZWEwMmNkOTQtOWRjMy00ODIxLWI3NzUtMzFkYjgxNWIwODk5",
+    "name":"Webex listener PODX",
+    "targetUrl":"https://hooks.us.webexconnect.io/events/ASKAS3CYE5",
+    "resource":"messages",
+    "event":"created",
+    "orgId":"Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi8zMThlODNmYy1mM2FiLTRlZTYtYjdjMS0yODYwOGRmNGI3MTI","createdBy":"Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMjMyZDQzZS1lZWY3LTRlMTctYjRjZC1mZGUzMDkzYWJiZTA","appId":"Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+    "ownedBy":"creator",
+    "status":"active",
+    "created":"2025-09-04T13:42:44.239Z"}
+    ```
+
+9. Go back to **Services**, you POD Service, **Flows**, and Click on the '_Healthcare Main Flow_' Flow
+
+10. Find the **Receive** node named '_Wait for message on Webhook_' and double click to edit it.
+
+11. Under **Receive Custopm Event**, **Custom Event**, choose the Inbound Webhook created above (_listener_podX_ i this example). Click **Save**.
+
+    
