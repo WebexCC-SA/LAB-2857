@@ -14,13 +14,14 @@ Go to this [link](https://appointment-management-production-095a.up.railway.app/
 
 Click **Add New Customer**, type **Name**, **Email** and **Mobile Number**. **Phone** and **Company** are not mandatory and won't be used during the lab, you can add some values for demo purposes.
 
-Example:
+- <ins>ATTENDEES WITH A US MOBILE NUMBER</ins>
 
-- Name = `Customer Pod4`
-- Email = `customerpod4@email.com`
-- Mobile Number = `12225556666`
+      **Mobile Number** has to be real, **Email** can be anything.
 
-**Email** and **Mobile Number** have to be real, they will be used later when we work on the Webex Connect Flow.
+- <ins>ATTENDEES WITHOUT A US MOBILE NUMBER</ins>
+
+      We will be sending Webex message to the customer, therefore **Email** has to be the email address for a real Webex user account.
+      **Mobile Number** can be anything.
 
 ## Check your Database record
 

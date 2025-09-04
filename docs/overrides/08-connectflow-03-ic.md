@@ -135,4 +135,4 @@ Next we will use the [Webex messaging API](https://developer.webex.com/docs/api/
 
         ![Webex Option](images/webex-option-1.png)
 
-    The Webex AI Agent has been added in this WEbex flow branch for you, you do not need to to it again.
+    The Webex AI Agent has been added in this Webex flow branch for you, you do not need to to it again.

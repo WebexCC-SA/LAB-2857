@@ -102,9 +102,14 @@ Next we will use the [Webex messaging API](https://developer.webex.com/docs/api/
 
 1. Choose your expert
 
-    Go to Custom Variables, and type the expert email address. The Webex message will be sent to this address
+    Go to Custom Variables, and type the expert email address. This has to be the email address for a real Webex user account.
 
     In a real project, normally there will be a process or system in place to choose the best expert for a given customer or interaction. In this case, the expert is a static value.
+
+
+    - <ins>ATTENDEES WITHOUT A US MOBILE NUMBER</ins>
+
+        Because you may have used your regular Webex user account email address for the customer in the previous **Backend Preparation** section, you will need a second one for the expert. If you already have one, use it. If you do not', you can create one http://web.webex.com (Sign Up option), or if you prefer you can use your admin user (admin-podX@ai-services-lab.wbx.ai).
 
 2. Add an **HTTP Request** node to the canvas, and connect it to the previous **SMS** node.
 

@@ -11,15 +11,15 @@ Click on **MAKE LIVE**, add some comments (Optional) and click on **Make Live** 
 
 2. Go to https://appointment-management-production-095a.up.railway.app/demo-start.html 
 
-    - ATTENDEES WITH US MOBILE NUMBER
+    - <ins>ATTENDEES WITH A US MOBILE NUMBER</ins>
 
         Type your mobile number. This has to be a real working US mobile Number, the same one you chose as the Customer mobile number in the previous **Backend Preparation** section.
 
         In the _Webex Connect Webhook URL_ input filed, paste your WebHook URL (`https://hooks.us.webexconnect.io/events/TOONJ56GSA` in this example). Click **Submit**.
 
-    - ATTENDEES WITHOUT US MOBILE NUMBER
+    - <ins>ATTENDEES WITHOUT A US MOBILE NUMBER</ins>
 
-        Type your email address. This has to be a real working email address, the same one you chose as the Customer email address in the previous **Backend Preparation** section.
+        Type your email address. This has to be the same one you chose as the **Customer** email address in the previous **Backend Preparation** section.
 
         In the _Webex Connect Webhook URL_ input filed, paste your WebHook URL (`https://hooks.us.webexconnect.io/events/TOONJ56GSA` in this example. Click **Submit**.
 
