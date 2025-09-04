@@ -89,9 +89,9 @@ nav:
   - Lab Guide:
       - Lab credentials: credentials.md
       - Introduction: 00-introduction.md
-      - Webex Instant Connect overview: 01-overview.md
+      - Instant Connect overview: 01-overview.md
       - Instant Connect configuration: 02-activation.md
-      - Webex Connect API: 03-instantconnectapi.md
+      - Instant Connect API: 03-instantconnectapi.md
       - Building your Webex AI Agent: 04-ai-agent-create.md
       - Backend preparation: 05-backend.md
       - Webex connect flow, getting customer data from CRM: 06-connectflow-01.md

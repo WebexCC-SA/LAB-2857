@@ -218,5 +218,3 @@ You need to follow some more steps in order to use Webex as the channel for this
 10. Find the **Receive** node named '_Wait for message on Webhook_' and double click to edit it.
 
 11. Under **Receive Custopm Event**, **Custom Event**, choose the Inbound Webhook created above (_listener_podX_ i this example). Click **Save**.
-
-    
