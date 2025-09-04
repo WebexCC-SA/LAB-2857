@@ -110,7 +110,7 @@ This section will provide meeting links for host (expert) and guest (end custome
 
     ![Send API Request with httpie](images/httpie-send.png)
 
-The response is easy to read, let's see how to create the meeting links
+    The response should be easy to read, let's see how to create the meeting links
 
 ## Construct the Meeting URLs
 
