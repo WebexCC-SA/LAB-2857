@@ -1,6 +1,6 @@
 # Lab Credentials
 
-## Webex Meetings guest-2-guest organization
+## Webex Meetings Guest-2-Guest organization
 Username:
 ```
 admin@aiserviceslab-5xmr.wbx.ai
@@ -12,7 +12,7 @@ Username:
 ```
 admin-podX@ai-services-lab.wbx.ai
 ```
-Where X is your POD number. Ask the proctors for the password
+Where X is your POD number. Please ask the proctors for the password
 
 
 
