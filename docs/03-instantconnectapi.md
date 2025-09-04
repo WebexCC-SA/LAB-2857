@@ -1,6 +1,6 @@
 # Webex Instant Connect API
 
-Now, let's build Instant Connect (IC) meeting links programmatically.
+Now, let's build the Instant Connect (IC) meeting links programmatically.
 
 ## Get an Access Token
 
@@ -13,6 +13,9 @@ You will need a Webex API access token to make calls to the IC API. You have two
 In this lab we will use a bot token.
 
 ## Create your BOT
+
+
+
 1. Go to https://developer.webex.com/docs/bots, log is as a Webex administrator in your org, and click on **Create a Bot**
 
 2. Select your Bot name (for example 'Video Expert'), and an icon of your choice. 
