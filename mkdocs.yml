@@ -87,7 +87,6 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Lab Guide:
-      - Lab credentials: credentials.md
       - Introduction: 00-introduction.md
       - Instant Connect overview: 01-overview.md
       - Instant Connect configuration: 02-activation.md
@@ -98,3 +97,4 @@ nav:
       - Adding the Webex AI Agent to the main Flow: 07-connectflow-02-ai-agent.md
       - Create and share Instant Connect meeting links: 08-connectflow-03-ic.md
       - Testing the flow: 09-testing-flow.md
+  - Lab credentials: credentials.md
