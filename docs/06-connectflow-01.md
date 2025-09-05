@@ -34,7 +34,7 @@ This is the interaction flow:
 
       ![Webex Connect Services](images/services-new.png){style="width:600px; display:block; margin:0 auto;"}
 
-      Select the Services for you POD, and click on **Create a Flow**. From the **Method** drop down menu, choose _Upload a Flow_, and select the Flow that you downloaded.
+      Select the Services for you POD, and click on **Create a Flow**. From the **Method** drop-down menu, choose _Upload a Flow_, and select the Flow that you downloaded.
       For the Flow name, choose `Healthcare Main Flow`. Click on **Create**.
 
 4. Click on **Create new event**, and choose as **Name** `podX-main-flow` where X is your POD number.

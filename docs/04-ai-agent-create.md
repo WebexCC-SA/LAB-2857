@@ -8,7 +8,7 @@ In this section you will learn how to create an Autonomous Webex AI Agent.
 
     ![Contact Center Administration](images/cc-admin.png){style="width:150px; display:block; margin:0 auto;"}
 
-    In the **Quick Links** section on the right, click on **Webex AI Agent** to access **AI Agent Studio**.
+    In the **Quick Links** section on the right, click on **Webex AI Agent** to access the **AI Agent Studio**.
 
 2. Click **Create agent**, **Start from scratch** and **Next**. Choose **Autonomous**
 
@@ -234,5 +234,21 @@ To save you time, these flows have been preloaded into the system.
 12. Go to **Webex Connect Flow Builder Fulfillment** at the bottom of the page. Select the _Fullfillment Flows_ Service and the _Create Appointment_ Flow.
 
 13. Click on **Save** to finish this section
+
+## Fine-tuning your AI Agent
+
+You can test how your AI Agent works before you add it to any Flow. Go back to the **AI Agent Studio**, select your Bot, Click on 💬 **Preview**, and start the conversation with 'Hi'.
+
+Learning how Webex AI Agent work is a important section of this lab, spend some time testing what you build if you like. Here you have some examples:
+
+- When trying to get the POD ID, Agent will offer examples (text: '_for example, POD1 or POD23_'). This is taken from the '_Check availability_' **Action**, **Entity Name** '_podId_'. This is a good way to be sure that the AGent will use the right examples, but you may want more flexibility. You ca try to remove the examples from the Entity setupo and check what happens.
+
+- Try different formats when choosing the appointment date. You can also try expressions like 'tomorrow at 5', 'in a week at noon', or 'next Monday at 15'
+
+- When you choose the preferred slot, try '1', 'the second' etc
+
+- The Scheduling system API that we built for the lab will provide many slots, up to 15 for a full empty day (see the **Fulfillment Flows** section for more details). Try to modify the AI Agent instructions (this line: '_If there are more than 3 slots available, offer only the first 3_') replacing '3' with '2', for example. Now the Agent should provide only two time slots! So, you were able to re-program the Agent without the need to write any code.
+
+- You can see all the appointments that the AI Agent creates on your [Appointments](https://appointment-management-production-095a.up.railway.app/appointments.html) web page
 
 🎯 Mission accomplished! Learn how to build a Webex AI Agent.
