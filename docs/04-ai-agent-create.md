@@ -235,4 +235,4 @@ To save you time, these flows have been preloaded into the system.
 
 13. Click on **Save** to finish this section
 
-Mission accomplished! Learn how to build a Webex AI Agent.
+🎯 Mission accomplished! Learn how to build a Webex AI Agent.

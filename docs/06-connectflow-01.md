@@ -136,5 +136,5 @@ This is the interaction flow:
 
    ![Transaction Actions, CRM](images/trans-action-crm.png){style="width:800px; display:block; margin:0 auto;"}
 
-Mission accomplished! Learn how to integrate Webex Connect with external databases
+🎯 Mission accomplished! Learn how to integrate Webex Connect with external databases
 

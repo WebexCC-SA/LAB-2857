@@ -125,5 +125,5 @@ Select the Services for you POD, and click on the flow named '_Healthcare Main F
    ![Transaction Actions, CRM](images/trans-action-crm.png)
 
 
-Mission accomplished! Learn how to integrate Webex Connect with external databases
+🎯 Mission accomplished! Learn how to integrate Webex Connect with external databases
 
