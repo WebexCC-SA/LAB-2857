@@ -95,6 +95,7 @@ nav:
       - Backend preparation: 05-backend.md
       - Webex connect flow, getting customer data from CRM: 06-connectflow-01.md
       - Adding the Webex AI Agent to the main Flow: 07-connectflow-02-ai-agent.md
+      - Fulfilment Flows: 075-fullfillment-flows.md
       - Create and share Instant Connect meeting links: 08-connectflow-03-ic.md
       - Testing the flow: 09-testing-flow.md
   - Lab credentials: credentials.md
