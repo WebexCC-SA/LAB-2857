@@ -1,5 +1,11 @@
 # Testing the Flow
 
+## Check flow errors
+
+- Edit all your **SMS** nodes, and choose one of the available numbers in the **From Number** drop-down menu.
+
+- Edit all your **Receive** nodes, and choose one of the available numbers in the **Number** drop-down menu. Use '\*' as **Keyword**.
+
 ## Publish the Flow
 
 Click on **MAKE LIVE**, add some comments (Optional) and click on **Make Live** again.
