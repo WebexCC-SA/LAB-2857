@@ -243,9 +243,9 @@ Learning how Webex AI Agent work is a important section of this lab, spend some 
 
 - When trying to get the POD ID, Agent will offer examples (text: '_for example, POD1 or POD23_'). This is taken from the '_Check availability_' **Action**, **Entity Name** '_podId_'. This is a good way to be sure that the AGent will use the right examples, but you may want more flexibility. You ca try to remove the examples from the Entity setupo and check what happens.
 
-- Try different formats when choosing the appointment date. You can also try expressions like 'tomorrow at 5', 'in a week at noon', or 'next Monday at 15'
+- Try different formats when choosing the appointment date. You can also try expressions like 'tomorrow at 5', 'in a week at noon', or 'next Monday at 15'. The scheduled API we built for the lab works with the typical '_2025-10-25T12:00:00Z_' date format, you do not need to worry about this, the Ai Agent handle this for you.
 
-- When you choose the preferred slot, try '1', 'the second' etc
+- When you choose the preferred slot, try '1', or '_the second_', etc.
 
 - The Scheduling system API that we built for the lab will provide many slots, up to 15 for a full empty day (see the **Fulfillment Flows** section for more details). Try to modify the AI Agent instructions (this line: '_If there are more than 3 slots available, offer only the first 3_') replacing '3' with '2', for example. Now the Agent should provide only two time slots! So, you were able to re-program the Agent without the need to write any code.
 
