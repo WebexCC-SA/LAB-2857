@@ -1,4 +1,4 @@
-# Webex Instant Connect API
+# Instant Connect API
 
 Now, let's build the Instant Connect (IC) meeting links programmatically.
 
@@ -28,7 +28,7 @@ In this lab we will use a bot token.
 
 ## Create the Meeting Links
 
-This section will provide meeting links for host (expert) and guest (end customer) users. You will use curl for this:
+This section will provide meeting links for host (expert) and guest (end customer) users. You can use curl for this:
 
 1. Open a text editor.
 
@@ -64,9 +64,7 @@ This section will provide meeting links for host (expert) and guest (end custome
     * `loginUrlForHost`: Default `true`. Relevant only if `provideShortUrls` is true. If set to `false`, the short URL for hosts will be non-login links which means the host won't have an option to login for the meeting.
 
 
-3. Replace _YOUR_BOT_TOKEN_HERE_ with yor Bot Token.
-
-    If you are comfortable with command line:
+3. Replace _YOUR_BOT_TOKEN_HERE_ with your Bot Token.
 
 4. Select all the text that you have now in the text editor and copy it.
 
