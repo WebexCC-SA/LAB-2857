@@ -241,7 +241,7 @@ You can test how your AI Agent works before you add it to any Flow. Go back to t
 
 Learning how Webex AI Agent work is a important section of this lab, spend some time testing what you build if you like. Here you have some examples:
 
-- When trying to get the POD ID, Agent will offer examples (text: '_for example, POD1 or POD23_'). This is taken from the '_Check availability_' **Action**, **Entity Name** '_podId_'. This is a good way to be sure that the AGent will use the right examples, but you may want more flexibility. You ca try to remove the examples from the Entity setupo and check what happens.
+- When trying to get the POD ID, Agent will offer examples (text: '_for example, POD1 or POD23_'). This is taken from the '_Check availability_' **Action**, **Entity Name** '_podId_'. This is a good way to be sure that the AGent will use the right examples, but you may want more flexibility. You ca try to remove the examples from the Entity setup and check what happens.
 
 - Try different formats when choosing the appointment date. You can also try expressions like 'tomorrow at 5', 'in a week at noon', or 'next Monday at 15'. The scheduled API we built for the lab works with the typical '_2025-10-25T12:00:00Z_' date format, you do not need to worry about this, the Ai Agent handle this for you.
 
