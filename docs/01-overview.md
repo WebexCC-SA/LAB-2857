@@ -4,7 +4,7 @@ Webex Instant Connect empowers organizations across all verticals to enhance cus
 
 ![Instant Connect Overview](images/overview.jpg)
 
-The Webex Instant Connect API provides the flexibility to schedule these sessions from external backends like Customer-Managed Relationship Systems (CRMs) and Electronic Medical Records (EMR) portals. Communication is highly secure, ensuring that and no private information is collected any point.
+The Webex Instant Connect API provides the flexibility to schedule these sessions from external backends like Customer-Managed Relationship Systems (CRMs) and Electronic Medical Records (EMR) portals. Communication is highly secure, ensuring that no private information is collected any point.
 
 As a fully flexible platform, Webex Instant Connect can be utilized for B2C meetings in any industry. It also provides relevant functionalities in healthcare, including in-patient tele-consultation, hourly virtual rounding, family visitation, and others.
 
