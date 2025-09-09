@@ -15,7 +15,7 @@ Click **Add New Customer**, type **Name**, **Email** and **Mobile Number**. **Ph
 
 - <ins>ATTENDEES WITH A US MOBILE NUMBER</ins>
 
-      **Mobile Number** has to be real, **Email** can be anything.
+      **Mobile Number** has to be **real**, **Email** can be any, for example _customerpodX@email.com_, where X is your pod Number.
 
 - <ins>ATTENDEES WITHOUT A US MOBILE NUMBER</ins>
 
