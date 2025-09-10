@@ -21,7 +21,7 @@ This is the interaction flow:
 
 ## Get Customer Data from CRM
 
-1. Download [this flow](/docs/Healthcare%20Main%20Flow.workflow).
+1. Download [this flow](Healthcare-Main-Flow.workflow).
 
 2. Log in Control Hub (https://admin.webex.com) with you Webex Contact Center tenant administrator credentials, go to **Services**, **Contact Center**:
 
