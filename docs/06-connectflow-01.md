@@ -17,7 +17,6 @@ This is the interaction flow:
 * Video Consultation is scheduled with an specialist. This process is handled by a Webex AI Autonomous Agent
 * Video with instructions is sent to the customer
 * Webex Instant Connect meeting links are created, and shared with the customer and the expert just before the meeting begins
-* CRM is updated, indicating that the customer requested the video escalation, and the specialist chosen (DO I KEEP THIS ??)
 * Customer and expert join the meeting
 
 ## Get Customer Data from CRM
