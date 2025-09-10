@@ -10,27 +10,26 @@ In this section you will learn how to create an Autonomous Webex AI Agent.
 
     In the **Quick Links** section on the right, click on **Webex AI Agent** to access the **AI Agent Studio**.
 
-2. Click **Create agent**, **Start from scratch** and **Next**. Choose **Autonomous**
+2. Click **Create agent**, **Start from scratch** and **Next**. Choose **Autonomous**.
 
-3. Name your agent _`PODX-Appointments`_, where X is your POD number. Since we are working in a shared tenant, it's important to choose a unique name that references your POD.
+3. Name your agent _`PODX-AIAgent`_, where X is your POD number. Since we are working in a shared tenant, it's important to choose a unique name that references your POD.
 
-    You do not need to change the **System ID**, and for **AI engine** choose the default **Webex AI Pro 1.0**
+    You do not need to change the **System ID**, and for **AI engine** choose the default **Webex AI Pro 1.0**.
 
-4. Agent's goal
+4. Agent's goal. Use this:
 
-    Use this:
     ```
-    Assist users with booking doctor appointments by efficiently guiding them through the necessary steps. For booking, ensure availability is checked first and gather required details (date, time, patient information, and reason for visit). 
-    ````
+    Assist users with booking doctor appointments by efficiently guiding them through the necessary steps.
+    For booking, ensure availability is checked first and gather required details (date, time, patient information). 
+    ```
 
     And click **Create**.
 
-5. AI Agent Welcome message
+5. AI Agent Welcome message. Change it to something like:
 
-Change it to something like:
-````
-Hi there, how can I help you?
-````
+    ```
+    Hi there, how can I help you?
+    ```
 
 ## Agent Instructions
 
@@ -38,7 +37,7 @@ This is one of the most important steps in the lab. In this section, you will le
 
 Paste this text in the **Instructions** text box:
 
-````
+```
 ## 1. Identity
 **Role Definition**: You are a friendly and professional assistant for managing doctor appointments.
 **Tone and Demeanour**: Maintain a polite and empathetic tone while assisting users.
@@ -47,13 +46,12 @@ Paste this text in the **Instructions** text box:
 **Background Information:** Users can only request to book video appointments. Each action depends on specific steps to ensure smooth execution.
 
 ## 3. Task
-
 **Booking a video Appointment:**
 1.	Check Availability:
 - Ask for the [podId] first. Do not ask for the preferred time in the same message. Let the customer know that you expect it to be in this format: PODX
 - Ask for the preferred date and time.
 - Use \[check_availability\] to confirm available slots.
-- If there are more than 3 slots available, offer only the first 3
+- If there are more than 3 slots available, offer only the first 3.
 2.	Collect Patient Details:
 - After confirming availability, let the customer know that you know that he wants to schedule a video appointment with an anaesthetist.
 - Ask the customer to confirm his name
@@ -78,7 +76,8 @@ Fallback Responses:
 - Limit conversations to booking doctor appointments.
 - Do not provide medical advice or address unrelated queries.
 
-````
+```
+
 It is a good practice to use markdown to get better results. In [this link](https://help.webex.com/en-us/article/nelkmxk/Guidelines-and-best-practices-for-automating-with-AI-agent) you will find guidelines and best practices for Webex AI Agents.
 
 
@@ -86,7 +85,7 @@ It is a good practice to use markdown to get better results. In [this link](http
 
 In this section, you will learn how to set up your agent to perform powerful actions, including interacting with external systems. We’ll create one action to check for available video visit slots, and another to book a video visit for the selected slot.
 
-1. Click on **Actions**. You can unselect the **Agent handover** actions, we won't use it in this example
+1. Click on **Actions**. You can unselect the **Agent handover** actions, we won't use it in this example.
 
 2. Click on **New action**, and use these values:
 
@@ -102,7 +101,7 @@ In this section, you will learn how to set up your agent to perform powerful act
 
 3. Click on **new input entity**
 
-    With entities, we will ensure that the AI Agent gather all the needed information. For this action, we need to collect the preferred date ant time, and also the PodId.
+    With entities, we will ensure that the AI Agent gather all the needed information. For this action, we need to collect the preferred date and time, and also the PodId.
 
     > **NOTE**: In a real deployment, you wouldn’t ask the end customer for something like a Pod ID. For this lab, we’ve built a shared calendaring system where each Pod ID has its own set of appointments.
     
@@ -111,7 +110,7 @@ In this section, you will learn how to set up your agent to perform powerful act
     - **Entity Name**
         ```
         podId
-        ````
+        ```
     - **Entity Type:** _String_
 
     - **Entity Description**
@@ -152,7 +151,7 @@ In this section, you will learn how to set up your agent to perform powerful act
         ```
         User’s preferred time
         ```
-    Add two **Entity Examples**, like _10:00_ and _14:30_:
+    Add two **Entity Examples**, like _10:00_ and _14:30_.
     
     The field **Required** should be _Yes_, click **Add** to finish the input setup
 
@@ -163,9 +162,9 @@ In this section, you will learn how to set up your agent to perform powerful act
     
 6. Go to **Webex Connect Flow Builder Fulfillment** at the bottom of the page. Select the _Fullfillment Flows_ Service and the _Check Availability_ Flow.
     
-To save you time, these flows have been preloaded into the system.
+    To save you time, these flows have been preloaded into the system. You can read a description later in the lab, in the _Fulfillment Flows_ section.
 
-7. Now it is time to repeat the process for the Action that will effectively Create the booking in the calendaring system. Go back to the **Actions** section, and click *+New action**
+7. Now it is time to repeat the process for the Action that will effectively Create the booking in the calendaring system. Go back to the **Actions** section, and click **New action**
 
 8.  Use these values:
 
@@ -201,7 +200,7 @@ To save you time, these flows have been preloaded into the system.
     - **Entity Name**
         ```
         podId
-        ````
+        ```
     - **Entity Type:** _String_
 
     - **Entity Description**
@@ -223,7 +222,6 @@ To save you time, these flows have been preloaded into the system.
         ```
         Date and time of the available slot
         ```
-    Add two **Entity Examples**, like _10:00_ and _14:30_:
     
     The field **Required** should be _Yes_, click **Add** to finish the input setup
 
@@ -241,9 +239,9 @@ You can test how your AI Agent works before you add it to any Flow. Go back to t
 
 Learning how Webex AI Agent work is a important section of this lab, spend some time testing what you build if you like. Here you have some examples:
 
-- When trying to get the POD ID, Agent will offer examples (text: '_for example, POD1 or POD23_'). This is taken from the '_Check availability_' **Action**, **Entity Name** '_podId_'. This is a good way to be sure that the AGent will use the right examples, but you may want more flexibility. You ca try to remove the examples from the Entity setup and check what happens.
+- When trying to get the POD ID, Agent will offer examples (text: '_for example, POD1 or POD23_'). This is taken from the '_Check availability_' **Action**, **Entity Name** '_podId_'. This is a good way to be sure that the Agent will use the right examples, but you may want more flexibility. You can try to remove the examples from the Entity setup and check what happens.
 
-- Try different formats when choosing the appointment date. You can also try expressions like 'tomorrow at 5', 'in a week at noon', or 'next Monday at 15'. The scheduled API we built for the lab works with the typical '_2025-10-25T12:00:00Z_' date format, you do not need to worry about this, the Ai Agent handle this for you.
+- Try different formats when choosing the appointment date. You can also try expressions like 'tomorrow at 5', 'in a week at noon', or 'next Monday at 15'. The scheduled API we built for the lab works with the typical '_2025-10-25T12:00:00Z_' date format, you do not need to worry about this, the AI Agent handle this for you.
 
 - When you choose the preferred slot, try '1', or '_the second_', etc.
 
