@@ -1,4 +1,4 @@
-# Adding the Webex AI Agent to the main Flow
+# Add the Webex AI Agent to the main Flow
 
 In this section you will learn how to add a Webex AI agent into any Connect Flow to serve digital channels. You will do it step by step to understand the process.
 

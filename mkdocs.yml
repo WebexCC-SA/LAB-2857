@@ -93,9 +93,9 @@ nav:
       - Instant Connect API: 03-instantconnectapi.md
       - Building your Webex AI Agent: 04-ai-agent-create.md
       - Backend preparation: 05-backend.md
-      - Webex connect flow, getting customer data from CRM: 06-connectflow-01.md
-      - Adding the Webex AI Agent to the main Flow: 07-connectflow-02-ai-agent.md
-      - Create and share Instant Connect meeting links: 08-connectflow-03-ic.md
+      - "Building the flow: Get customer data from CRM": 06-connectflow-01.md
+      - "Building the flow: Add the AI Agent": 07-connectflow-02-ai-agent.md
+      - "Building the flow: Instant Connect meeting links": 08-connectflow-03-ic.md
       - Testing the flow: 09-testing-flow.md
       - Fulfillment Flows: 075-fullfillment-flows.md
   - Lab credentials: credentials.md
