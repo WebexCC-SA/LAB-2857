@@ -4,7 +4,7 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
 ## AI Agent Node
 
-1. Go back to Webex Connect, and create a **Custom Variable**, name it _messageToAgent_ and choose _Hi_ as the **Default Value**
+1. Go back to Webex Connect, click on **Services**, select your POD, access your Flows and select your '_Healthcare Main Flow_' Flow. Create a **Custom Variable**, name it _messageToAgent_ and choose _'Hi'_ as the **Default Value**
 
     You can configure your Custom Variables in Settings, on the top-right part of the screen:
 

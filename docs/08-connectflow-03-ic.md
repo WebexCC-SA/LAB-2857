@@ -4,6 +4,8 @@
 
 Similarly to what we did previously in the **Webex Instant Connect API** section , here we will create Webex Instant Connect meeting links.  However, instead of using curl we will use an **HTTP Request** node. 
 
+1. Go back to Webex Connect, and click on **Services**. Select your POD, access your Flows and then your 'Healthcare Main Flow' Flow. Click on the **Settings** wheel on the top right, and then **Custom Variables**. Find the variable named _botToken_ and paste the value of the BOT token created in the _Instant Connect API_ previous section.
+
 1. Add a new **HTTP Request** node to the canvas, and connect it to the  **Delay** node orange dot
 
 - Configure the node as shown below:
@@ -27,7 +29,7 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
             "verticalType": "hc",
             "loginUrlForHost": false
         }
-        ````
+        ```
 
         With the option `verticalType` = `hc` , Instant Connect user interface will be automatically customized for a Healthcare use case.
 
@@ -41,7 +43,7 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
 
 > **Note:** Node numbers may be different.
 
-- For the **Sample Body**, you can use the response body you got with curl, ot use the http request node _Test_ option.
+- For the **Sample Body**, you can use the response body you got with curl, ot use the **HTTP Request** Node embedded _Test_ option.
 
     Here you have on example that you can copy and paste:
     ```
@@ -70,13 +72,13 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
 
     ![alt text](images/data-parser-ic-vars.png)
 
-    And **Save** the node
+    And **Save** the node.
 
 4. Next, we will build variables containing the host and guest URLs. We can use again the embedded capabilities of Webex Connect nodes for this:
 
 - Edit the  **Data Parse** node we just created, and go to the **Transition Actions (Optional)** tab.
 
-- As we did in **Webex Connect Flow: Meeting Scheduling** section, add an Action and create two **Custom Variables**: `guestURL` and `hostURL`.
+- Add an Action and create two **Custom Variables**: `guestURL` and `hostURL`.
 
     The URL values are created by concatenating the `baseUrl` and the values in the `short` and `guest` keys on node leave.
         
@@ -86,7 +88,7 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
 
 ## Send link to customer
 
-1. Copy any of the SMS nodes in the flow, copy and paste it, and connect it to the previous **Data Parser** node
+1. Copy any of the SMS nodes in the flow, paste it, and connect it to the previous **Data Parser** node.
 
 2. Change the **Message** to:
     ```
@@ -102,14 +104,14 @@ Next we will use the [Webex messaging API](https://developer.webex.com/docs/api/
 
 1. Choose your expert
 
-    Go to Custom Variables, and type the expert email address. This has to be the email address for a real Webex user account.
+    Go back again to Custom Variables (under the **Settings** wheel), and type the expert email address. This has to be the email address for a real Webex user account.
 
     In a real project, normally there will be a process or system in place to choose the best expert for a given customer or interaction. In this case, the expert is a static value.
 
 
     - <ins>ATTENDEES WITHOUT A US MOBILE NUMBER</ins>
 
-        Because you may have used your regular Webex user account email address for the customer in the previous **Backend Preparation** section, you will need a second one for the expert. If you already have one, use it. If you do not', you can create one http://web.webex.com (Sign Up option), or if you prefer you can use your admin user (admin-podX@ai-services-lab.wbx.ai).
+        Because you may have used your regular Webex user account email address for the customer in the previous **Backend Preparation** section, you will need a second one for the expert. If you already have one, use it. If you do not, you can create one in [here](http://web.webex.com) (_Sign Up_ option), or if you prefer you can use your admin user (admin-podX@ai-services-lab.wbx.ai).
 
 2. Add an **HTTP Request** node to the canvas, and connect it to the previous **SMS** node.
 
@@ -150,7 +152,7 @@ You need to follow some more steps in order to use Webex as the channel for this
 
 4. Choose a unique name, for example _listener_podX_, where X is your POD number.
 
-5. Copy and Save the WebHook URL (we will use https://hooks.us.webexconnect.io/events/ASKAS3CYE5 in this example)
+5. Copy and Save the WebHook URL (we will use ```https://hooks.us.webexconnect.io/events/ASKAS3CYE5``` in this example)
 
 6. Click on the **Paste JSON tab**, and paste:
     ```js
@@ -194,7 +196,7 @@ You need to follow some more steps in order to use Webex as the channel for this
         "event": "created"
         }'
     ```
-    - Replace _YOUR_BOT_TOKEN_ with your bot Token and _INBOUND_WEBHOOK_URL_ with URL for the Inbund Webhook created above (https://hooks.us.webexconnect.io/events/ASKAS3CYE5 in this example)
+    - Replace _YOUR_BOT_TOKEN_ with your bot Token and _INBOUND_WEBHOOK_URL_ with URL for the Inbund Webhook created above (```https://hooks.us.webexconnect.io/events/ASKAS3CYE5``` in this example)
     - Select all the text that you have now in the text editor and copy it.
     - Open a Terminal session.
     - Paste the content of the clipboard and and press enter
@@ -213,7 +215,7 @@ You need to follow some more steps in order to use Webex as the channel for this
     "created":"2025-09-04T13:42:44.239Z"}
     ```
 
-9. Go back to **Services**, you POD Service, **Flows**, and Click on the '_Healthcare Main Flow_' Flow
+9. Go back to **Services**, your POD Service, **Flows**, and Click on your '_Healthcare Main Flow_' Flow.
 
 10. Find the **Receive** node named '_Wait for message on Webhook_' and double click to edit it.
 
