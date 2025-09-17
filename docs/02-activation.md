@@ -1,10 +1,10 @@
 # Webex Instant Connect configuration
 
-Open a browser and log in https://instant.webex.com as a Webex administrator in your Webex Meetings Guest-2-Guest organization with the lab credentials provided, and:
+1. Open a browser and, go to https://instant.webex.com and Click on **Begin Integration**.
 
-1. Click on **Begin Integration**.
+2. Log in as a Webex administrator in your Webex Meetings Guest-2-Guest organization with the lab credentials provided
 
-2. Check that Instant Connect is activated.
+3. Check that Instant Connect is activated.
 
 Now we are ready to use the Webex Instant Connect API! In this lab you will learn how to do it both manually,  and also automatically using Webex Connect.
 
