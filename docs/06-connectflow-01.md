@@ -120,20 +120,21 @@ This is the interaction flow:
 
 9. Let's learn now about a very powerful Webex Connect feature: how to modify variables.
 
-- Double-click on this very same 'Parse Response' **Data Parser** node that we created, and select **Transaction Actions (Optional)**
+      - Double-click on this very same 'Parse Response' **Data Parser** node that we created, and select **Transaction Actions (Optional)**
 
-- Add a new action
-- Under **Action 1**, select:
-   Time = `On-leave`
-    
-   Action = `Set variable`
-   Variable: choose `customerName` abs as **Value** type `$(n101.customerName)`
-   
-   Note that the node numbers maybe different, and how you can access the output of this very same **Receive** node under **Output Variables**.
+      - Add a new action
+      - Under **Action 1**, select:
+         Time = `On-leave`
+         
+         Action = `Set variable`
+         Variable: choose `customerName` abs as **Value** type `$(n101.customerName)`
+         
+         Note that the node numbers maybe different, and how you can access the output of this very same **Receive** node under **Output Variables**.
 
-- Add another _On-leave_ Action, this time choose `[Debug] Log a Value to transaction log`. For the of `Log Id` you can use '1001', and `$(customerName)` for the value. This will help you troubleshooting the flow if needed.
+      - Add another _On-leave_ Action, this time choose `[Debug] Log a Value to transaction log`. For the of `Log Id` you can use '1001', and `$(customerName)` for the value. This will help you troubleshooting the flow if needed.
 
-   ![Transaction Actions, CRM](images/trans-action-crm.png){style="width:800px; display:block; margin:0 auto;"}
+         ![Transaction Actions, CRM](images/trans-action-crm.png){style="width:800px; display:block; margin:0 auto;"}
 
-🎯 Mission accomplished! Learn how to integrate Webex Connect with external databases
+      🎯 Mission accomplished! Learn how to integrate Webex Connect with external databases
 
+10. Before you move to the next section, connect this 'Parse Response' node to the existing node named 'Get Surgery Date'.
