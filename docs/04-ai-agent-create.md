@@ -80,6 +80,8 @@ Fallback Responses:
 
 It is a good practice to use markdown to get better results. In [this link](https://help.webex.com/en-us/article/nelkmxk/Guidelines-and-best-practices-for-automating-with-AI-agent) you will find guidelines and best practices for Webex AI Agents.
 
+Save your changes before moving on.
+
 
 ## Agent Actions
 
@@ -160,7 +162,7 @@ In this section, you will learn how to set up your agent to perform powerful act
     ![Check Availability Action](images/action-availability.png)
 
     
-6. Go to **Webex Connect Flow Builder Fulfillment** at the bottom of the page. Select the _Fullfillment Flows_ Service and the _Check Availability_ Flow.
+6. Go to **Webex Connect Flow Builder Fulfillment** at the bottom of the page. Select the _Fullfillment Flows_ Service and the _Check Availability_ Flow. Click on **->Add**
     
     To save you time, these flows have been preloaded into the system. You can read a description later in the lab, in the _Fulfillment Flows_ section.
 
@@ -231,13 +233,13 @@ In this section, you will learn how to set up your agent to perform powerful act
 
 12. Go to **Webex Connect Flow Builder Fulfillment** at the bottom of the page. Select the _Fullfillment Flows_ Service and the _Create Appointment_ Flow.
 
-13. Click on **Save** to finish this section
+13. Click on **->Add** and **Publish** your Agent.
 
 ## Fine-tuning your AI Agent
 
 You can test how your AI Agent works before you add it to any Flow. Go back to the **AI Agent Studio**, select your Bot, Click on 💬 **Preview**, and start the conversation with 'Hi'.
 
-Learning how Webex AI Agent work is a important section of this lab, spend some time testing what you build if you like. Here you have some examples:
+Learning how Webex AI Agent work is a important section of this lab, spend some time testing what you built if you like. Here you have some examples:
 
 - When trying to get the POD ID, Agent will offer examples (text: '_for example, POD1 or POD23_'). This is taken from the '_Check availability_' **Action**, **Entity Name** '_podId_'. This is a good way to be sure that the Agent will use the right examples, but you may want more flexibility. You can try to remove the examples from the Entity setup and check what happens.
 
