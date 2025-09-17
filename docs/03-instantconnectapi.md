@@ -14,7 +14,7 @@ In this lab we will use a bot token.
 
 ## Create your BOT
 
-1. Go to [Webex Developer Portal](https://developer.webex.com/docs/bots), log in as a Webex administrator in your Webex Meetings Guest-2-Guest organization with the lab credentials provided, and click on **Start Building Apps** and **Create a Bot**
+1. Go to [Webex Developer Portal](https://developer.webex.com/docs/bots), log in as a Webex administrator in your Webex Meetings Guest-2-Guest organization with the lab credentials provided, and click on **Create a Bot**.
 
 2. Select a unique Bot name (for example 'Video Expert PODX' where X is your POD number), and an icon of your choice. 
 
@@ -118,7 +118,7 @@ In this example, `https://instant.webex.com/visit/oCVp2LD` for the host and `htt
 
 Now you only need to share the host URL with the expert providing support, and the guest URL with the end customer asking for support !!
 
-This can be done by email, SMS, be integrated into some web portal, CRM, EMR, etc. In the next steps, you will learn how to do it in a digital channel like WhatsApp using Webex Connect.
+This can be done by email, SMS, be integrated into some web portal, CRM, EMR, etc. In the next steps, you will learn how to do it in a digital channel like SMS using Webex Connect.
 
 
 
