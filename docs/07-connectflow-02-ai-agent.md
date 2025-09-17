@@ -14,14 +14,14 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
      ![AI Agent Node](images/ai-agent-node.png){style="width:300px; display:block; margin:0 auto;"}
 
-    and add it to the Canvas. Connect it to the Branch Node named 'Yes or No'
+    and add it to the Canvas. Connect it to the Branch Node named 'Yes or No'.
 
 3. Double click on the node to set it up:
 
 
     ![AI Agent Node setup](images/ai-agent-node-setup.png){style="width:800px; display:block; margin:0 auto;"}
 
-    On the **AGENT** drop-down. menu, choose the AI Agent that you have created. Notice that the _messageToAgent_ Custom Variable will trigger the Agent.
+    On the **AGENT** drop-down. menu, choose the AI Agent that you have created (podX-AIAgent). Notice that the _messageToAgent_ Custom Variable will trigger the Agent. Click on **Save**.
 
 ## Working with end customer messages
 
@@ -31,6 +31,8 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
     - Double click on this new SMS Node to set it up.
     - Rename it to something like _Agent Message_, and choose these values:
 
+        > NOTE: as **From Nunber** you can choose any of the two available
+
     ![Sending an SMS with the Agent response](images/sms-node-agent-message.png){style="width:800px; display:block; margin:0 auto;"}
 
     Depending on the order you followed during the lab, what you see on the screen might be slightly different. Normally, you will see the AI Agent node as the last one in the list of nodes on the right. Remember that you can always check the node numbers by clicking the **Debug** button.
@@ -39,7 +41,7 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
 2. Select any of the Receive nodes that you already have in the flow, copy and paste it. Connect it the 'Agent Message' previous SMS Node.
 
-3. This Receive Node will get the end customer question/message. Now we need to send it back to the Agent. Double click the Receive Node, and add a Transaction Action like this
+3. This Receive Node will get the end customer question/message. Now we need to send it back to the Agent. Double click the Receive Node, and add a Transaction Action like this:
 
     ![Transaction Action for the AI Agent message](images/receive-transaction-agent-message.png){style="width:800px; display:block; margin:0 auto;"}
 
@@ -55,7 +57,7 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
 1. Remove the connection between the AI Agent Node, and the 'Agent Message' SMS Node. You do this by selecting the connection and clicking on the **Delete** button on the bottom of the Flow Editor canvas.
 
-2. Add a new Branch Node, connect it to the AI Agent Node, and configure it like this:
+2. Add a new Branch Node, connect it to the AI Agent Node (_on_Success_ branch), and configure it like this:
 
     ![Branch Node to check if it is the last message](images/branch-ai-agent.png){style="width:800px; display:block; margin:0 auto;"}
 
@@ -80,7 +82,9 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
     ![Closing Session](images/ai-agent-close-session.png){style="width:800px; display:block; margin:0 auto;"}
 
-4. Connect the last 'Time Out' SMS node that you created to this 'Closing Session' AI Agent Node.
+    Choose your POD bot.
+
+4. Connect the last 'Time Out' SMS node (green bubble) that you created to this 'Closing Session' AI Agent Node.
 
     This section of the flow should look like this:
 

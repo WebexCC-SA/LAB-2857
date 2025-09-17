@@ -2,9 +2,9 @@
 
 ## Check flow errors
 
-- Edit all your **SMS** nodes, and choose one of the available numbers in the **From Number** drop-down menu.
+- Edit all your **SMS** nodes, and choose one of the available numbers in the **From Number** drop-down menu. Choose the same for all nodes.
 
-- Edit the **Receive** nodes with errors: choose the same number in the **Number** drop-down menu. Use '\*' as **Keyword**.
+- Edit all  the **Receive** nodes: choose the same number in the **Number** drop-down menu for all of them. Use '\*' as **Keyword**.
 
 ## Publish the Flow
 
@@ -40,4 +40,6 @@ Now you can interact with the flow, and check how:
 - AI Agent helps you choosing your preferred date fot the video visit
 - Video visit is scheduled, and links are sent to customer and expert
 - Customer and expert can join the video session
+
+    You can log in [web.webex.com](https://web.webex.com) to receive the Webex messages.
 

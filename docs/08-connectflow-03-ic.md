@@ -22,7 +22,7 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
         ```
         {
             "jwt": {
-            "sub": "Video Call with your practitioner - $(n2.whatsapp.timestamp)"
+            "sub": "Video Call with your practitioner - $(n2.inboundWebhook.timestamp)"
             },
             "aud": "a4d886b0-979f-4e2c-a958-3e8c14605e51",
             "provideShortUrls": "true",
@@ -88,15 +88,9 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
 
 ## Send link to customer
 
-1. Copy any of the SMS nodes in the flow, paste it, and connect it to the previous **Data Parser** node.
+ 1. Connect the Data Parser node to the 'Channel Selection' Branch Node.
 
-2. Change the **Message** to:
-    ```
-    Hi $(customerName), you can join your video appointment in this link: $(guestURL)
-    ```
-
-3.  Rename the node to 'Offer guest URL to customer' and **Save** it
-
+ 2. Double click on the SMS node named 'Send guest URL', and check the variable $(guestURL) is used to send the link to the customer.
 
 ## Send link to expert
 
@@ -138,11 +132,13 @@ Next we will use the [Webex messaging API](https://developer.webex.com/docs/api/
 If you do not have a US mobile number, you can still test your flow.
 
 1. Go to the _Channel Selection_ **Branch Node**, and connect the 'Webex' outcome to the **HTTP Request Node** named _Reminder-Webex Channel_   
+    
+    (You may need to zoom out and go to the beginning of the flow)
 
 
     ![Webex Option](images/webex-option-1.png)
 
-The Webex AI Agent has been added in this Webex flow branch for you, you do not need to to it again.
+The Webex AI Agent has been added in this Webex flow branch for you, you do not need to to it again. Now please go to the end of the flow, and connect the output of the '_Send guest URL - Webex_' node to the '_Offer host URL to expert_' node.
 
 You need to follow some more steps in order to use Webex as the channel for this use case:
 
@@ -196,7 +192,7 @@ You need to follow some more steps in order to use Webex as the channel for this
         "event": "created"
         }'
     ```
-    - Replace _YOUR_BOT_TOKEN_ with your bot Token and _INBOUND_WEBHOOK_URL_ with URL for the Inbund Webhook created above (```https://hooks.us.webexconnect.io/events/ASKAS3CYE5``` in this example)
+    - Replace _YOUR_BOT_TOKEN_ with your bot Token, _INBOUND_WEBHOOK_URL_ with URL for the Inbound Webhook created above (```https://hooks.us.webexconnect.io/events/ASKAS3CYE5``` in this example), and use your POD number.
     - Select all the text that you have now in the text editor and copy it.
     - Open a Terminal session.
     - Paste the content of the clipboard and and press enter
@@ -217,6 +213,8 @@ You need to follow some more steps in order to use Webex as the channel for this
 
 9. Go back to **Services**, your POD Service, **Flows**, and Click on your '_Healthcare Main Flow_' Flow.
 
-10. Find the **Receive** node named '_Wait for message on Webhook_' and double click to edit it.
+10. Find the two **Receive** nodes named '_Wait for message on Webhook_' and edit both of them:
 
-11. Under **Receive Custopm Event**, **Custom Event**, choose the Inbound Webhook created above (_listener_podX_ i this example). Click **Save**.
+    Under **Receive Custom Event**, **Custom Event**, choose the Inbound Webhook created above (_listener_podX_ in this example). Click **Save**.
+    
+    Make sure that these two receive nodes green outputs are connected to the next Data Parser node!

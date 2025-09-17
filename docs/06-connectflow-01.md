@@ -137,4 +137,4 @@ This is the interaction flow:
 
       🎯 Mission accomplished! Learn how to integrate Webex Connect with external databases
 
-10. Before you move to the next section, connect this 'Parse Response' node to the existing node named 'Get Surgery Date'.
+10. Before you move to the next section, connect this 'Parse Response' node to the existing node named 'Get Surgery Date'. Save your Flow.
