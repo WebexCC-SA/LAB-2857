@@ -10,7 +10,7 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
     ![Custom Vars](images/settings-custom-vars.png){style="width:600px; display:block; margin:0 auto;"}
 
-2. Go the Node Pallette on the right side of the screen, select the _AI Agent_ node:
+2. Go the Node Pallette on the left side of the screen, select the _AI Agent_ node:
 
      ![AI Agent Node](images/ai-agent-node.png){style="width:300px; display:block; margin:0 auto;"}
 
