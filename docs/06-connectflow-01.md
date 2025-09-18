@@ -14,7 +14,7 @@ This is the interaction flow:
 * Customer name is read from CRM
 * Surgery date is generated
 * Surgery reminder is sent
-* Video Consultation is scheduled with an specialist. This process is handled by a Webex AI Autonomous Agent
+* Video Consultation is scheduled with a specialist. This process is handled by a Webex AI Autonomous Agent
 * Video with instructions is sent to the customer
 * Webex Instant Connect meeting links are created, and shared with the customer and the expert just before the meeting begins
 * Customer and expert join the meeting
@@ -68,11 +68,11 @@ This is the interaction flow:
       
          Where `x-pod-id` is your POD number, and `x-user-email`is the attendee email of your choice
 
-      - Rename this http request node to something like 'Get Customer Name from CRM' and **Save**.
+      - Rename this http request node to something like 'Get Customer Name from CRM' (edit the text at the top of the window, and click the green tick ysmbol) and **Save**.
 
 8. Add a **Data Parser** node, and connect it to the **HTTP Request Node**. This will allow you to parse the data received from the customer data base to be used later in any node in the flow.
 
-      - For **Input: Import Data From**: under the **Input Variables** section to the right, select the `http.response.body` variable from the previous **HTTP Request** node 'Get Customer Name From' configured in the previous step.
+      - For **Input: Import Data From**: under the **Input Variables** section to the right, select the `http.responseBody` variable from the previous **HTTP Request** node 'Get Customer Name From' configured in the previous step.
 
       - Now, we will populate **Sample Body (optional)** with some JSON that exemplifies the data we expect to be parsing.
 
@@ -127,14 +127,14 @@ This is the interaction flow:
          Time = `On-leave`
          
          Action = `Set variable`
-         Variable: choose `customerName` abs as **Value** type `$(n101.customerName)`
+         Variable: choose `customerName`, and as **Value** type `$(n101.customerName)`
          
          Note that the node numbers maybe different, and how you can access the output of this very same **Receive** node under **Output Variables**.
 
-      - Add another _On-leave_ Action, this time choose `[Debug] Log a Value to transaction log`. For the of `Log Id` you can use '1001', and `$(customerName)` for the value. This will help you troubleshooting the flow if needed.
+      - Add another _On-leave_ Action, this time choose `[Debug] Log a Value to transaction log`. For the `Log Id` you can use '1001', and `$(customerName)` for the value. This will help you troubleshooting the flow if needed.
 
          ![Transaction Actions, CRM](images/trans-action-crm.png){style="width:800px; display:block; margin:0 auto;"}
 
-      🎯 Mission accomplished! Learn how to integrate Webex Connect with external databases
-
 10. Before you move to the next section, connect this 'Parse Response' node to the existing node named 'Get Surgery Date'. Save your Flow.
+
+🎯 Mission accomplished! Learn how to integrate Webex Connect with external databases
