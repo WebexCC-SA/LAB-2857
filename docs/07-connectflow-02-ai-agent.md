@@ -12,9 +12,11 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
 2. Go the Node Pallette on the left side of the screen, select the _AI Agent_ node:
 
-     ![AI Agent Node](images/ai-agent-node.png){style="width:300px; display:block; margin:0 auto;"}
+    ![AI Agent Node](images/ai-agent-node.png){style="width:300px; display:block; margin:0 auto;"}
 
-    and add it to the Canvas. Connect it to the Branch Node named 'Yes or No'.
+    and add it to the Canvas. Connect it to the Branch Node named 'Yes or No':
+    
+    ![Adding AI Agent](images/ai-agent-add.png){style="width:800px; display:block; margin:0 auto;"}
 
 3. Double click on the node to set it up:
 
