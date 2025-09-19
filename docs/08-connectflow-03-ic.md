@@ -197,6 +197,8 @@ You need to follow some more steps in order to use Webex as the channel for this
     - Open a Terminal session.
     - Paste the content of the clipboard and and press enter
 
+    You can also use Postman, Bruno, or HTTPie to create this webhook. You just need to copy the CURL request above 👆, and import it.
+    
     You should get a response similar to  this: 
 
     ```js
