@@ -1,5 +1,17 @@
 # Testing the Flow
 
+## Configure the link for the instructions video
+
+On Webex Connect, if you go to **Tools**, **Smart Links**, you will see that a smart link to the instructions video has been already created for you. This is another powerful Webex Connect feature, you can get more details [here](https://help.webexconnect.io/docs/smart-links). Now, you still need to use this link in your flow.
+
+1. Go back to your Flow, and search for an SMS node '_Video with instructions_':
+
+    ![Instructions Video](images/instrucions-video.jpg){style="width:700px; display:block; margin:0 auto;"}
+
+2. Double click to edit it, and choose the Smart Link in the _Smart Link_ drop-down menu. This should automatically add a reference to the link in the Message Text:
+
+    ![Smart Link](images/smart-link.jpg){style="width:700px; display:block; margin:0 auto;"}
+
 ## Check flow errors
 
 - Edit all your **SMS** nodes, and choose one of the available numbers in the **From Number** drop-down menu. Choose the same for all nodes.
