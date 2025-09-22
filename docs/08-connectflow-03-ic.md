@@ -6,11 +6,13 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
 
 1. Go back to Webex Connect, and click on **Services**. Select your POD, access your Flows and then your 'Healthcare Main Flow' Flow. Click on the **Settings** wheel on the top right, and then **Custom Variables**. Find the variable named _botToken_ and paste the value of the BOT token created in the _Instant Connect API_ previous section.
 
-1. Add a new **HTTP Request** node to the canvas, and connect it to the  **Delay** node orange dot
+2. Add a new **HTTP Request** node to the canvas, and connect it to the  **Delay** node orange dot. You should find the **Delay** node almost at the end of the Flow:
 
-- Configure the node as shown below:
+    ![HTTP Request node to create Meeting Links](images/ic-links-http-request.png){style="width:600px; display:block; margin:0 auto;"}
 
-    ![Creating Meeting Links](images/create-meeting-links.png)
+    Configure the node as shown below:
+
+    ![Creating Meeting Links](images/create-meeting-links.png){style="width:900px; display:block; margin:0 auto;"}
 
     Here you have some of the values that you can copy-paste:
 
@@ -33,58 +35,58 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
 
         With the option `verticalType` = `hc` , Instant Connect user interface will be automatically customized for a Healthcare use case.
 
-- Rename the node to 'Create meeting links' and **Save** it
+    - Rename the node to 'Create meeting links' and **Save** it
 
-3. Add a **Data Parser** node to the canvas, and connect it to the previous **HTTP Request** node
+3. Add a **Data Parser** node to the canvas, and connect it to the previous **HTTP Request** node.
 
-- To get the value for **Input: Import Data From**, chooe the `http.response.body` variable from the `Create Meeting Links` **HTTP Request** node configured in the previous step:
+    - To get the value for **Input: Import Data From**, choose the `http.response.body` variable from the `Create Meeting Links` **HTTP Request** node configured in the previous step:
 
-![Data Parser node setup](images/data-parser-ic.png)
+    ![Data Parser node setup](images/data-parser-ic.png){style="width:800px; display:block; margin:0 auto;"}
 
-> **Note:** Node numbers may be different.
+    > **Note:** Node numbers may be different.
 
-- For the **Sample Body**, you can use the response body you got with curl, ot use the **HTTP Request** Node embedded _Test_ option.
+    - For the **Sample Body**, you can use the response body you got with curl, ot use the **HTTP Request** Node embedded _Test_ option.
 
-    Here you have on example that you can copy and paste:
-    ```
-    {
-        "host": [
-            {
-                "cipher": "eyJwMnMiOiJpNmZta3dp...cWl3ZGw2cjFuSkg0bEUj",
-                "short": "oCVp2LD"
-            }
-        ],
-        "guest": [
-            {
-                "cipher": "eyJwMnMiOiJEQVdaHOBS...RDTvlZ-aLLRdIMSmCwEc",
-                "short": "ckmNR7I"
-            }
-        ],
-        "baseUrl": "https://instant.webex.com/visit/"
-    }
-    ```
+        Here you have on example that you can copy and paste:
+        ```
+        {
+            "host": [
+                {
+                    "cipher": "eyJwMnMiOiJpNmZta3dp...cWl3ZGw2cjFuSkg0bEUj",
+                    "short": "oCVp2LD"
+                }
+            ],
+            "guest": [
+                {
+                    "cipher": "eyJwMnMiOiJEQVdaHOBS...RDTvlZ-aLLRdIMSmCwEc",
+                    "short": "ckmNR7I"
+                }
+            ],
+            "baseUrl": "https://instant.webex.com/visit/"
+        }
+        ```
 
-- Click on **Parse**
+    - Click on **Parse**
 
-- In this case you do not need to **Select** and **IMPORT** all the variables, `$.baseUrl`, `$.host[0].short` and `$.guest[0].short` are enough.
+    - In this case you do not need to **Select** and **IMPORT** all the variables, `$.baseUrl`, `$.host[0].short` and `$.guest[0].short` are enough.
 
-    Set the **OUTPUT VARIABLE NAMES** as shown below:
+        Set the **OUTPUT VARIABLE NAMES** as shown below:
 
-    ![alt text](images/data-parser-ic-vars.png)
+        ![Output Variables](images/data-parser-ic-vars.png){style="width:600px; display:block; margin:0 auto;"}
 
-    And **Save** the node.
+        And **Save** the node.
 
 4. Next, we will build variables containing the host and guest URLs. We can use again the embedded capabilities of Webex Connect nodes for this:
 
-- Edit the  **Data Parse** node we just created, and go to the **Transition Actions (Optional)** tab.
+    - Edit the  **Data Parse** node we just created, and go to the **Transition Actions (Optional)** tab.
 
-- Add an Action and create two **Custom Variables**: `guestURL` and `hostURL`.
+    - Add an Action and create two **Custom Variables**: `guestURL` and `hostURL`.
 
-    The URL values are created by concatenating the `baseUrl` and the values in the `short` and `guest` keys on node leave.
-        
-![Variable Creation](images/create-vars-ic-links.png)
+        The URL values are created by concatenating the `baseUrl` and the values in the `short` and `guest` keys on node leave.
+            
+        ![Variable Creation](images/create-vars-ic-links.png){style="width:800px; display:block; margin:0 auto;"}
 
-   > **Note:** Node numbers may be different.
+    > **Note:** Node numbers may be different.
 
 ## Send link to customer
 
@@ -111,7 +113,7 @@ Next we will use the [Webex messaging API](https://developer.webex.com/docs/api/
 
     - Configure the node as shown below:
 
-        ![HTTP Request for Webex](images/http-request-webex.png)
+        ![HTTP Request for Webex](images/http-request-webex.png){style="width:800px; display:block; margin:0 auto;"}
 
         Here you have some of the values that you can copy-paste:
 
@@ -136,7 +138,7 @@ If you do not have a US mobile number, you can still test your flow.
     (You may need to zoom out and go to the beginning of the flow)
 
 
-    ![Webex Option](images/webex-option-1.png)
+    ![Webex Option](images/webex-option-1.png){style="width:900px; display:block; margin:0 auto;"}
 
 The Webex AI Agent has been added in this Webex flow branch for you, you do not need to to it again. Now please go to the end of the flow, and connect the output of the '_Send guest URL - Webex_' node to the '_Offer host URL to expert_' node.
 
