@@ -165,7 +165,7 @@ In this section, you will learn how to set up your agent to perform powerful act
     ![Check Availability Action](images/action-availability.png)
 
     
-6. Go to **Webex Connect Flow Builder Fulfillment** at the bottom of the page. Select the _Fullfillment Flows_ Service and the _Check Availability_ Flow.
+6. Go to **Webex Connect Flow Builder Fulfillment** at the bottom of the page. Select the _Fulfillment Flows_ Service and the _Check Availability_ Flow.
     
 To save you time, these flows have been preloaded into the system.
 
@@ -235,7 +235,7 @@ To save you time, these flows have been preloaded into the system.
         
     ![Create Appointment Action](images/action-create-app.png)
 
-12. Go to **Webex Connect Flow Builder Fulfillment** at the bottom of the page. Select the _Fullfillment Flows_ Service and the _Create Appointment_ Flow.
+12. Go to **Webex Connect Flow Builder Fulfillment** at the bottom of the page. Select the _Fulfillment Flows_ Service and the _Create Appointment_ Flow.
 
 13. Click on **Save** to finish this section
 

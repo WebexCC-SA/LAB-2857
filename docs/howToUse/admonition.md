@@ -1,6 +1,6 @@
 
 
-> In addition to the [ stock admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types) which are available out of the box we have added some additional branded admonitions which were created by Bobby McGonigle. 
+> In addition to the [stock admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types) which are available out of the box we have added some additional branded admonitions which were created by Bobby McGonigle. 
 
 
 !!! blank

@@ -31,7 +31,7 @@ Click on **MAKE LIVE**, add some comments (Optional) and click on **Make Live** 
 Now you can interact with the flow, and check how:
 
 - Customer name is read from the database
-- AI Agent helps you choosing your preferred date fot the video visit
+- AI Agent helps you choosing your preferred date for the video visit
 - Video visit is scheduled, and links are sent to customer and expert
 - Customer and expert can join the video session
 

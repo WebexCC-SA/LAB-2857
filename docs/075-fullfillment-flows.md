@@ -1,6 +1,6 @@
 # Fulfillment Flows
 
-These flows han been already created to save you time, let's have see how they were designed.
+These flows have been already created to save you time, let's have a look at how they were designed.
 
 ## Check availability Flow
 
@@ -87,7 +87,7 @@ The '_Check Available Slots_' **Http Request Node** will get the available slots
   "totalSlots": 15
 }
 ```
-As you saw in the previous **Building your WEbex AI Agent** section, AI Agent is able to offer only the first 3 available slots using a simple instruction.
+As you saw in the previous **Building your Webex AI Agent** section, AI Agent is able to offer only the first 3 available slots using a simple instruction.
 
 The result of a fulfillment Flow is defined in **Flow Settings** ⚙️ , **Flow Outcomes**, **OUTCOME**, **Last Execution Status** :
 
