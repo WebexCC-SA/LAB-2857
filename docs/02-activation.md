@@ -2,7 +2,7 @@
 
 1. Open a browser and, go to the [Instant Connect main page](https://instant.webex.com) and Click on **Begin Integration**.
 
-2. Log in as a Webex administrator in your Webex Meetings Guest-2-Guest organization with the lab credentials provided
+2. Log in as a Webex administrator in your **Webex Meetings Guest-2-Guest** organization with the lab credentials provided
 
 3. Check that Instant Connect is activated.
 
