@@ -14,7 +14,7 @@ In this lab we will use a bot token.
 
 ## Create your BOT
 
-1. Go to [Webex Developer Portal](https://developer.webex.com/docs/bots), log in as a Webex administrator in your Webex Meetings Guest-2-Guest organization with the lab credentials provided, and click on **Create a Bot**.
+1. Go to [Webex Developer Portal](https://developer.webex.com/docs/bots), log in as a Webex administrator in your **Webex Meetings Guest-2-Guest organization** with the lab credentials provided, and click on **Create a Bot**.
 
 2. Select a unique Bot name (for example 'Video Expert PODX' where X is your POD number), and an icon of your choice. 
 
