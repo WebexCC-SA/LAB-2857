@@ -148,10 +148,14 @@ In this section, you will learn how to set up your agent to perform powerful act
         ```
         preferredTime
         ```
-    - **Entity Type:** _String_
+    - **Entity Type:** _Time_
     - **Entity Description**
         ```
         User’s preferred time
+        ```
+    - **Value**
+        ```
+        hh:mm
         ```
     Add two **Entity Examples**, like _10:00_ and _14:30_.
     
@@ -219,10 +223,14 @@ In this section, you will learn how to set up your agent to perform powerful act
         ```
         timeSlot
         ```
-    - **Entity Type:** _String_
+    - **Entity Type:** _Time_
     - **Entity Description**
         ```
         Date and time of the available slot
+        ```
+    - **Value**
+        ```
+        hh:mm
         ```
     
     The field **Required** should be _Yes_, click **Add** to finish the input setup
@@ -238,6 +246,8 @@ In this section, you will learn how to set up your agent to perform powerful act
 ## Fine-tuning your AI Agent
 
 You can test how your AI Agent works before you add it to any Flow. Go back to the **AI Agent Studio**, select your Bot, Click on 💬 **Preview**, and start the conversation with 'Hi'.
+
+Appointments can be booked any day in the week, from 9AM to 5PM.
 
 Learning how Webex AI Agent work is a important section of this lab, spend some time testing what you built if you like. Here you have some examples:
 
