@@ -16,7 +16,11 @@ On Webex Connect, if you go to **Tools**, **Smart Links**, you will see that a s
 
 - Edit all your **SMS** nodes, and choose one of the available numbers in the **From Number** drop-down menu. Choose the same for all nodes.
 
-- Edit all  the **Receive** nodes: choose the same number in the **Number** drop-down menu for all of them. Use '\*' as **Keyword**.
+- Edit all the **Receive** nodes that are connected to an **SMS node**: choose the same number in the **Number** drop-down menu for all of them. Use '\*' as **Keyword**.
+
+> IMPORTANT !! Attendees without a US Mobile Number should skip this next step:
+
+- Edit all the **Receive** nodes that are connected to an **HTTP Request node**: in the **Custom Event** drop-down menu, choose _all_pods_listener_.
 
 ## Publish the Flow
 
