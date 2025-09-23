@@ -129,7 +129,10 @@ This is the interaction flow:
          Action = `Set variable`
          Variable: choose `customerName`, and as **Value** type `$(n101.customerName)`
          
-         Note that the node numbers maybe different, and how you can access the output of this very same **Receive** node under **Output Variables**.
+         Note that the node numbers maybe different. You can access the right value under **Output Variables**:
+
+         ![output-variables](images/output-variables.png){style="width:800px; display:block; margin:0 auto;"}
+         
 
       - Add another _On-leave_ Action, this time choose `[Debug] Log a Value to transaction log`. For the `Log Id` you can use '1001', and `$(customerName)` for the value. This will help you troubleshooting the flow if needed.
 
