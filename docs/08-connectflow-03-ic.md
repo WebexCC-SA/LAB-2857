@@ -39,7 +39,7 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
 
 3. Add a **Data Parser** node to the canvas, and connect it to the previous **HTTP Request** node.
 
-    - To get the value for **Input: Import Data From**, choose the `http.response.body` variable from the `Create Meeting Links` **HTTP Request** node configured in the previous step:
+    - To get the value for **Input: Import Data From**, choose the `http.responseBody` variable from the `Create Meeting Links` **HTTP Request** node configured in the previous step:
 
     ![Data Parser node setup](images/data-parser-ic.png){style="width:800px; display:block; margin:0 auto;"}
 
@@ -90,17 +90,19 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
 
 ## Send link to customer
 
- 1. Connect the Data Parser node to the 'Channel Selection' Branch Node.
+ 1. Connect the Data Parser node to the 'Channel Selection' Branch Node that you should have at the end of the flow:
+
+    ![Channel Selection Node](images/channel-selection-node.png){style="width:700px; display:block; margin:0 auto;"}
 
  2. Double click on the SMS node named 'Send guest URL', and check the variable $(guestURL) is used to send the link to the customer.
 
 ## Send link to expert
 
-Next we will use the [Webex messaging API](https://developer.webex.com/docs/api/v1/messages/create-a-message) to send a message from your Webex bot to the expert.
+Next, we will use the [Webex messaging API](https://developer.webex.com/docs/api/v1/messages/create-a-message) to send a message from your Webex bot to the expert.
 
 1. Choose your expert
 
-    Go back again to Custom Variables (under the **Settings** wheel), and type the expert email address. This has to be the email address for a real Webex user account.
+    Go back again to **Custom Variables** (under the **Settings** wheel), and type the expert email address. This has to be the email address for a real Webex user account.
 
     In a real project, normally there will be a process or system in place to choose the best expert for a given customer or interaction. In this case, the expert is a static value.
 
@@ -109,7 +111,7 @@ Next we will use the [Webex messaging API](https://developer.webex.com/docs/api/
 
         Because you may have used your regular Webex user account email address for the customer in the previous **Backend Preparation** section, you will need a second one for the expert. If you already have one, use it. If you do not, you can create one in [here](http://web.webex.com) (_Sign Up_ option), or if you prefer you can use your admin user (admin-podX@ai-services-lab.wbx.ai).
 
-2. Add an **HTTP Request** node to the canvas, and connect it to the previous **SMS** node.
+2. Add an **HTTP Request** node to the canvas, and connect it to the previous **SMS** node named _'Send guest URL'_.
 
     - Configure the node as shown below:
 
@@ -133,9 +135,9 @@ Next we will use the [Webex messaging API](https://developer.webex.com/docs/api/
 
 If you do not have a US mobile number, you can still test your flow.
 
-1. Go to the _Channel Selection_ **Branch Node**, and connect the 'Webex' outcome to the **HTTP Request Node** named _Reminder-Webex Channel_   
+1. Go to the _Channel Selection_ **Branch Node** at the beginning of the Flow, and connect the 'Webex' outcome to the **HTTP Request Node** named _Reminder-Webex Channel_:
     
-    (You may need to zoom out and go to the beginning of the flow)
+    > Note: You may need to zoom out and go to the beginning of the flow)
 
 
     ![Webex Option](images/webex-option-1.png){style="width:900px; display:block; margin:0 auto;"}
@@ -144,7 +146,7 @@ The Webex AI Agent has been added in this Webex flow branch for you, you do not 
 
 You need to follow some more steps in order to use Webex as the channel for this use case:
 
-2. At the left side menu bar, click on **Assets** and **Integrations** (Save your Flow first!)
+2. At the left side Webex Connect menu bar, click on **Assets** and **Integrations** (Save your Flow first!)
 
 3. Click on **Add Integration** and choose **Inbound Webhook**
 
