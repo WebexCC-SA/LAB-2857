@@ -18,4 +18,4 @@
 
       ![Instant Connect customization](images/ic-customization.png){style="width:900px; display:block; margin:0 auto;"}
 
-Do not change any of these options for now
+Do not change any of these options for now.

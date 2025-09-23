@@ -34,7 +34,7 @@ curl --request GET \
   --header 'x-user-email: studentpod4@email.com'
 
 ```
-You can copy this curl request, paste it in a Text Editor and replace _12225556666_ by your customer  **Mobile Number**, _customerpodX%40email.com_ by your customer **Email**, and _studentpod4@email.com_ by your attendee email address. Then paste the content of the text editor in a Terminal session, and press Enter to run it.
+You can copy this curl request, paste it in a Text Editor and replace _12225556666_ with your customer  **Mobile Number**, _customerpodX%40email.com_ with your customer **Email**, and _studentpod4@email.com_ with your attendee email address. Then paste the content of the text editor in a Terminal session, and press Enter to run it.
 You can also import the curl request into Postman or httpie as you did in the _Instant Connect API_ section.
 
 You should get and answer like this:
