@@ -32,7 +32,7 @@ This section will provide meeting links for host (expert) and guest (end custome
 
 1. Open a text editor.
 
-2. Copy and paste:
+2. Copy this CURL request:
 
     ```
     curl --location 'https://mtg-broker-a.wbx2.com/api/v2/joseencrypt' \
@@ -64,15 +64,19 @@ This section will provide meeting links for host (expert) and guest (end custome
     * `loginUrlForHost`: Default `true`. Relevant only if `provideShortUrls` is true. If set to `false`, the short URL for hosts will be non-login links which means the host won't have an option to login for the meeting.
 
 
-3. Replace _YOUR_BOT_TOKEN_HERE_ with your Bot Token.
+3. Now you can import the CURL request into Bruno, Postman, or httpie. To do it with httpie, open a browser tab and go to [https://httpie.io/app](https://httpie.io/app). Close the popup.
 
-4. Select all the text that you have now in the text editor and copy it.
+4. Go to the API Request URL field:
 
-5. Open a Terminal session
+    ![httpie](images/httpie.png)
 
-6. Paste the content of the clipboard and and press enter
+    and paste the CURL request copied previously. This should import the curl request into httpie. Click on **Update**
+
+5. Replace _YOUR_BOT_TOKEN_HERE_ with your Bot Token, and click on **Send**:
+
+    ![Send API Request with httpie](images/httpie-send.png)
     
-    API response should be something like this:
+    The API response should be something like this:
     
     ```js
     {
@@ -93,23 +97,6 @@ This section will provide meeting links for host (expert) and guest (end custome
     ```
     > **Note:** Response has been formatted to make the documentation more understandable
 
-    API Response may be difficult to read, but all the needed values should be there: _baseUrl_, _host.short_ and _guest.short_. If you prefer to use a more graphical tool, you can use Postman, Bruno, or https://httpie.io/app:
-
-1. Open a browser tab and go to [https://httpie.io/app](https://httpie.io/app). Close the popup.
-
-2. Go to the API Request URL field:
-
-    ![httpie](images/httpie.png)
-
-    and paste the content of your text editor. This should import the curl request into httpie. Click on **Update**
-
-3. You API Request should be now ready, click on **Send**:
-
-
-    ![Send API Request with httpie](images/httpie-send.png)
-
-    The response should be easy to read, let's see how to create the meeting links
-
 ## Construct the Meeting URLs
 
 Forming the meeting links is as simple as taking the `baseUrl` value and concatenating the values in `short`.
@@ -119,7 +106,3 @@ In this example, `https://instant.webex.com/visit/oCVp2LD` for the host and `htt
 Now you only need to share the host URL with the expert providing support, and the guest URL with the end customer asking for support !!
 
 This can be done by email, SMS, be integrated into some web portal, CRM, EMR, etc. In the next steps, you will learn how to do it in a digital channel like SMS using Webex Connect.
-
-
-
-
