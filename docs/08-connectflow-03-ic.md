@@ -142,9 +142,9 @@ If you do not have a US mobile number, you can still test your flow.
 
     ![Webex Option](images/webex-option-1.png){style="width:900px; display:block; margin:0 auto;"}
 
-The Webex AI Agent has been added in this Webex flow branch for you, you do not need to to it again. Now please go to the end of the flow, and connect the output of the '_Send guest URL - Webex_' node to the '_Offer host URL to expert_' node.
+    The Webex AI Agent has been added in this Webex flow branch for you, you do not need to to it again. Now please go to the end of the flow, and connect the output of the '_Send guest URL - Webex_' node to the '_Offer host URL to expert_' node.
 
-You need to follow some more steps in order to use Webex as the channel for this use case:
+    You need to follow some more steps in order to use Webex as the channel for this use case:
 
 2. At the left side Webex Connect menu bar, click on **Assets** and **Integrations** (Save your Flow first!)
 
@@ -183,7 +183,8 @@ You need to follow some more steps in order to use Webex as the channel for this
 7. Click on **Parse** and **Save**
 
 8. Create a Webhook associated to your Bot. This Webhook will be 'listening' to all the messages sent to the Bot
-    - Open a text editor, and paste:
+
+    - Copy this CURL request:
     ```
         curl --request POST \
         --url https://webexapis.com/v1/webhooks \
@@ -196,26 +197,26 @@ You need to follow some more steps in order to use Webex as the channel for this
         "event": "created"
         }'
     ```
-    - Replace _YOUR_BOT_TOKEN_ with your bot Token, _INBOUND_WEBHOOK_URL_ with URL for the Inbound Webhook created above (```https://hooks.us.webexconnect.io/events/ASKAS3CYE5``` in this example), and use your POD number.
-    - Select all the text that you have now in the text editor and copy it.
-    - Open a Terminal session.
-    - Paste the content of the clipboard and and press enter
 
-    You can also use Postman, Bruno, or HTTPie to create this webhook. You just need to copy the CURL request above 👆, and import it.
+    - Import it into httpie, Bruno or Postman, as you did in the previous section '_Backend Peparation_'.
+
+    - Replace _YOUR_BOT_TOKEN_ with your bot Token, _INBOUND_WEBHOOK_URL_ with URL for the Inbound Webhook created above (```https://hooks.us.webexconnect.io/events/ASKAS3CYE5``` in this example), and use your POD number:
+
+    ![Webhook creation](images/httpie-webhook.png){style="width:900px; display:block; margin:0 auto;"}
     
     You should get a response similar to  this: 
 
-    ```js
-    {"id":"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1dFQkhPT0svZWEwMmNkOTQtOWRjMy00ODIxLWI3NzUtMzFkYjgxNWIwODk5",
-    "name":"Webex listener PODX",
-    "targetUrl":"https://hooks.us.webexconnect.io/events/ASKAS3CYE5",
-    "resource":"messages",
-    "event":"created",
-    "orgId":"Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi8zMThlODNmYy1mM2FiLTRlZTYtYjdjMS0yODYwOGRmNGI3MTI","createdBy":"Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMjMyZDQzZS1lZWY3LTRlMTctYjRjZC1mZGUzMDkzYWJiZTA","appId":"Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
-    "ownedBy":"creator",
-    "status":"active",
-    "created":"2025-09-04T13:42:44.239Z"}
-    ```
+            ```js
+            {"id":"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1dFQkhPT0svZWEwMmNkOTQtOWRjMy00ODIxLWI3NzUtMzFkYjgxNWIwODk5",
+            "name":"Webex listener PODX",
+            "targetUrl":"https://hooks.us.webexconnect.io/events/ASKAS3CYE5",
+            "resource":"messages",
+            "event":"created",
+            "orgId":"Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi8zMThlODNmYy1mM2FiLTRlZTYtYjdjMS0yODYwOGRmNGI3MTI","createdBy":"Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMjMyZDQzZS1lZWY3LTRlMTctYjRjZC1mZGUzMDkzYWJiZTA","appId":"Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+            "ownedBy":"creator",
+            "status":"active",
+            "created":"2025-09-04T13:42:44.239Z"}
+            ```
 
 9. Go back to **Services**, your POD Service, **Flows**, and Click on your '_Healthcare Main Flow_' Flow.
 

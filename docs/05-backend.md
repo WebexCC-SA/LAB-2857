@@ -25,7 +25,7 @@ Click **Add New Customer**, type **Name**, **Email** and **Mobile Number**. **Ph
 
 ## Check your Database record
 
-You should be able to get your new customer details using this API request:
+You can get your new customer details using this API request:
 
 ```
 curl --request GET \
@@ -36,39 +36,47 @@ curl --request GET \
 
 ```
 
-Import this CURL request into httpie, Bruno or Postman ad you did in the previous section '_Instant Connect API_', it should look like this:
+1. Import this CURL request into httpie, Bruno or Postman. If you are using httpie, click on the '+' sign and choose Import:
 
-   ![Httpie request](images/httpie-customer.png){style="width:900px; display:block; margin:0 auto;"}
+      ![httpie new request](images/httpie-new.png){style="width:300px; display:block; margin:0 auto;"}
 
-You should get and answer like this:
+2. Click on 'Text', and paste the copied CURL request:
 
-```
-{
-   "podId":"POD4",
-   "userEmail":"studentpod4@email.com",
-   "adminMode":false,
-   "searchCriteria":{
-      "email":"customerpod4@email.com",
-      "mobileNumber":"12225556666"
-   },
-   "searchScope":"user_customers",
-   "matchingCustomers":[
+      ![Httpie request](images/httpie-customer.png){style="width:900px; display:block; margin:0 auto;"}
+
+3. Click on '_Next..._' and then on '_Import_'
+
+4. In _Headers_, user you POD number and attendee email. In the request URL (_https://appointment-management-production-095a.up.railway.app/api/customers/search/?mobileNumber=12225556666&email=customerpod4%40email.com_), replace 12225556666 with the customer mobile number, and customerpod4%40email.com with the customer email.
+
+5. . Click on send, the response should look like this:
+
+      ```
       {
-         "id":"791b0fe8-b5aa-4e18-8eb6-2076d3d20d8c",
-         "name":"Customer Pod4",
-         "email":"customerpod4@email.com",
-         "phone":"",
-         "mobileNumber":"12225556666",
-         "company":"",
-         "status":"active",
-         "createdBy":"studentpod4@email.com",
-         "createdAt":"2025-07-28T20:39:38.171Z",
-         "updatedAt":"2025-07-28T20:39:38.171Z"
+         "podId":"POD4",
+         "userEmail":"studentpod4@email.com",
+         "adminMode":false,
+         "searchCriteria":{
+            "email":"customerpod4@email.com",
+            "mobileNumber":"12225556666"
+         },
+         "searchScope":"user_customers",
+         "matchingCustomers":[
+            {
+               "id":"791b0fe8-b5aa-4e18-8eb6-2076d3d20d8c",
+               "name":"Customer Pod4",
+               "email":"customerpod4@email.com",
+               "phone":"",
+               "mobileNumber":"12225556666",
+               "company":"",
+               "status":"active",
+               "createdBy":"studentpod4@email.com",
+               "createdAt":"2025-07-28T20:39:38.171Z",
+               "updatedAt":"2025-07-28T20:39:38.171Z"
+            }
+         ],
+         "totalMatches":1,
+         "totalSearched":1
       }
-   ],
-   "totalMatches":1,
-   "totalSearched":1
-}
-```
+      ```
 
 
