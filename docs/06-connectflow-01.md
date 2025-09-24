@@ -120,7 +120,7 @@ This is the interaction flow:
 
 9. Let's learn now about a very powerful Webex Connect feature: how to modify variables.
 
-      - Double-click on this very same 'Parse Response' **Data Parser** node that we created, and select **Transaction Actions (Optional)**
+      - Double-click on this very same 'Parse Response' **Data Parser** node that we created, and select **Transition Actions (Optional)**
 
       - Add a new action
       - Under **Action 1**, select:
