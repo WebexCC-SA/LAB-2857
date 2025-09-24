@@ -95,7 +95,7 @@ This section will provide meeting links for host (expert) and guest (end custome
 
     API Response may be difficult to read, but all the needed values should be there: _baseUrl_, _host.short_ and _guest.short_. If you prefer to use a more graphical tool, you can use Postman, Bruno, or https://httpie.io/app:
 
-1. Open a browser tab and go to https://httpie.io/app. Click on **Close**
+1. Open a browser tab and go to [https://httpie.io/app](https://httpie.io/app). Close the popup.
 
 2. Go to the API Request URL field:
 
