@@ -3,6 +3,7 @@
 One of the objectives of this lab is to demonstrate how Webex Connect can retrieve and update relevant business information from backend systems such as databases, CRMs or EMRs.
 
 You have access to a mock up database for every POD where you can provision your own customers.
+
 ## Access your Customer Database
 
 Go to this [link](https://appointment-management-production-095a.up.railway.app/database.html), use your POD number (for example _POD4_) and an attendee email address (for example _studentpod4@email.com_). Click on '_Manage my Customers_' to move on.
@@ -34,8 +35,10 @@ curl --request GET \
   --header 'x-user-email: studentpod4@email.com'
 
 ```
-You can copy this curl request, paste it in a Text Editor and replace _12225556666_ with your customer  **Mobile Number**, _customerpodX%40email.com_ with your customer **Email**, and _studentpod4@email.com_ with your attendee email address. Then paste the content of the text editor in a Terminal session, and press Enter to run it.
-You can also import the curl request into Postman or httpie as you did in the _Instant Connect API_ section.
+
+Import this CURL request into httpie, Bruno or Postman ad you did in the previous section '_Instant Connect API_', it should look like this:
+
+   ![Httpie request](images/httpie-customer.png){style="width:900px; display:block; margin:0 auto;"}
 
 You should get and answer like this:
 
