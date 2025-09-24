@@ -68,7 +68,7 @@ This is the interaction flow:
       
          Where `x-pod-id` is your POD number, and `x-user-email`is the attendee email of your choice
 
-      - Rename this http request node to something like 'Get Customer Name from CRM' (edit the text at the top of the window, and click the green tick ysmbol) and **Save**.
+      - Rename this http request node to something like 'Get Customer Name from CRM' (edit the text at the top of the window, and click the green tick symbol) and **Save**.
 
 8. Add a **Data Parser** node, and connect it to the **HTTP Request Node**. This will allow you to parse the data received from the customer data base to be used later in any node in the flow.
 
