@@ -88,6 +88,8 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
 
     > **Note:** Node numbers may be different.
 
+    Click **Save**.
+
 ## Send link to customer
 
  1. Connect the Data Parser node to the 'Channel Selection' Branch Node that you should have at the end of the flow:
@@ -152,7 +154,7 @@ If you do not have a US mobile number, you can still test your flow.
 
 4. Choose a unique name, for example _listener_podX_, where X is your POD number.
 
-5. Copy and Save the WebHook URL (we will use ```https://hooks.us.webexconnect.io/events/ASKAS3CYE5``` in this example)
+5. Copy the WebHook URL in a safe place (we will use ```https://hooks.us.webexconnect.io/events/ASKAS3CYE5``` in this example)
 
 6. Click on the **Paste JSON tab**, and paste:
     ```js

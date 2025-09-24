@@ -33,7 +33,7 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
     - Double click on this new SMS Node to set it up.
     - Rename it to something like _Agent Message_, and choose these values:
 
-        > NOTE: as **From Nunber** you can choose any of the two available. Once you choose one, use always the same
+        > NOTE: as **From Number** you can choose any of the two numbers available. Once you choose one, use always the same. Do not use 'CONNCT'.
 
     ![Sending an SMS with the Agent response](images/sms-node-agent-message.png){style="width:800px; display:block; margin:0 auto;"}
 
@@ -41,9 +41,11 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
     ![Debug](images/debug.png){style="width:80px; display:block; margin:0 auto;"}
 
+    Click **Save**.
+
 2. Select any of the Receive nodes that you already have in the flow, copy and paste it. Connect it to the 'Agent Message' previous SMS Node.
 
-3. This Receive Node will get the end customer question/message. Now we need to send it back to the Agent. Double click the Receive Node, and add a Transaction Action like this:
+3. This Receive Node will get the end customer question/message. Now we need to send it back to the Agent. Double click the Receive Node, and add a Transition Action like this:
 
     ![Transaction Action for the AI Agent message](images/receive-transaction-agent-message.png){style="width:800px; display:block; margin:0 auto;"}
 
