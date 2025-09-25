@@ -6,7 +6,7 @@ You have access to a mock up database for every POD where you can provision your
 
 ## Access your Customer Database
 
-Go to this [link](https://appointment-management-production-095a.up.railway.app/database.html), use your POD number (for example _POD4_) and an attendee email address (for example _studentpod4@email.com_). Click on '_Manage my Customers_' to move on.
+Go to this [link](https://appointment-management-production-095a.up.railway.app/database.html){target="blank"}, use your POD number (for example _POD4_) and an attendee email address (for example _studentpod4@email.com_). Click on '_Manage my Customers_' to move on.
 
 > NOTE: this attendee email address can be any, it won't be used later in the flow. It is used to keep POD's information isolated: you will have access only to your own customers, other lab attendees won't see your customer data. Do not share this email address with other lab attendees !!
 
