@@ -72,7 +72,7 @@ This section will provide meeting links for host (expert) and guest (end custome
 
     and paste the CURL request copied previously. This should import the curl request into httpie. Click on **Update**
 
-5. Replace _YOUR_BOT_TOKEN_HERE_ with your Bot Token, and click on **Send**:
+5. Click on **Auth** and replace _YOUR_BOT_TOKEN_HERE_ with your Bot Token. Now click on **Send**:
 
     ![Send API Request with httpie](images/httpie-send.png)
     
