@@ -223,14 +223,10 @@ In this section, you will learn how to set up your agent to perform powerful act
         ```
         timeSlot
         ```
-    - **Entity Type:** _Time_
+    - **Entity Type:** _String_
     - **Entity Description**
         ```
         Date and time of the available slot
-        ```
-    - **Value**
-        ```
-        hh:mm
         ```
     
     The field **Required** should be _Yes_, click **Add** to finish the input setup
