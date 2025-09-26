@@ -36,17 +36,20 @@ curl --request GET \
 
 ```
 
-1. Import this CURL request into httpie, Bruno or Postman. If you are using httpie, click on the '+' sign and choose Import:
+1. Import this CURL request into httpie, Bruno or Postman. If you are using httpie, copy the CURL request above, click on the '+' sign and choose Import:
 
       ![httpie new request](images/httpie-new.png){style="width:300px; display:block; margin:0 auto;"}
 
-2. Click on 'Text', and paste the copied CURL request:
-
-      ![Httpie request](images/httpie-customer.png){style="width:900px; display:block; margin:0 auto;"}
+2. Click on 'Text', and paste the copied CURL request.
 
 3. Click on '_Next..._' and then on '_Import_'
 
-4. In _Headers_, user you POD number and attendee email. In the request URL (_https://appointment-management-production-095a.up.railway.app/api/customers/search/?mobileNumber=12225556666&email=customerpod4%40email.com_), replace 12225556666 with the customer mobile number, and customerpod4%40email.com with the customer email.
+      ![Httpie request](images/httpie-customer.png){style="width:900px; display:block; margin:0 auto;"}
+
+
+4. In **Headers**, use you POD number and attendee email. In the request URL (_https://appointment-management-production-095a.up.railway.app/api/customers/search/?mobileNumber=12225556666&email=customerpod4%40email.com_), replace 12225556666 with the customer mobile number, and customerpod4%40email.com with the customer email.
+
+> Note: URL parameters have to be encoded, %40 is the encoded representation of '@'.
 
 5. . Click on send, the response should look like this:
 
