@@ -157,7 +157,7 @@ If you do not have a US mobile number, you can still test your flow.
 5. Copy the WebHook URL in a safe place (we will use ```https://hooks.us.webexconnect.io/events/ASKAS3CYE5``` in this example)
 
 6. Click on the **Paste JSON tab**, and paste:
-    ```js
+    ```
     {
         "id": "",
         "name": "",
@@ -182,12 +182,14 @@ If you do not have a US mobile number, you can still test your flow.
     }
     ```
 
+
 7. Click on **Parse** and **Save**
 
 8. Create a Webhook associated to your Bot. This Webhook will be 'listening' to all the messages sent to the Bot
 
     - Copy this CURL request:
-    ```
+
+        ```
         curl --request POST \
         --url https://webexapis.com/v1/webhooks \
         --header 'authorization: Bearer YOUR_BOT_TOKEN' \
@@ -198,7 +200,7 @@ If you do not have a US mobile number, you can still test your flow.
         "resource": "messages",
         "event": "created"
         }'
-    ```
+        ```
 
     - Import it into httpie, Bruno or Postman, as you did in the previous section '_Backend Peparation_'.
 
@@ -208,17 +210,17 @@ If you do not have a US mobile number, you can still test your flow.
     
     You should get a response similar to  this: 
 
-            ```js
-            {"id":"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1dFQkhPT0svZWEwMmNkOTQtOWRjMy00ODIxLWI3NzUtMzFkYjgxNWIwODk5",
-            "name":"Webex listener PODX",
-            "targetUrl":"https://hooks.us.webexconnect.io/events/ASKAS3CYE5",
-            "resource":"messages",
-            "event":"created",
-            "orgId":"Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi8zMThlODNmYy1mM2FiLTRlZTYtYjdjMS0yODYwOGRmNGI3MTI","createdBy":"Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMjMyZDQzZS1lZWY3LTRlMTctYjRjZC1mZGUzMDkzYWJiZTA","appId":"Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
-            "ownedBy":"creator",
-            "status":"active",
-            "created":"2025-09-04T13:42:44.239Z"}
-            ```
+    ```js
+    {"id":"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1dFQkhPT0svZWEwMmNkOTQtOWRjMy00ODIxLWI3NzUtMzFkYjgxNWIwODk5",
+    "name":"Webex listener PODX",
+    "targetUrl":"https://hooks.us.webexconnect.io/events/ASKAS3CYE5",
+    "resource":"messages",
+    "event":"created",
+    "orgId":"Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi8zMThlODNmYy1mM2FiLTRlZTYtYjdjMS0yODYwOGRmNGI3MTI","createdBy":"Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMjMyZDQzZS1lZWY3LTRlMTctYjRjZC1mZGUzMDkzYWJiZTA","appId":"Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+    "ownedBy":"creator",
+    "status":"active",
+    "created":"2025-09-04T13:42:44.239Z"}
+    ```
 
 9. Go back to **Services**, your POD Service, **Flows**, and Click on your '_Healthcare Main Flow_' Flow.
 
