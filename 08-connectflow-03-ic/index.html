@@ -1,0 +1,1129 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="How to improve customer interactions with video and AI">
+      
+      
+        <meta name="author" content="Victor Vazquez">
+      
+      
+      
+        <link rel="prev" href="../07-connectflow-02-ai-agent/">
+      
+      
+        <link rel="next" href="../09-testing-flow/">
+      
+      
+      <link rel="icon" href="../template_assets/webex75.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Building the flow: Instant Connect meeting links - LAB-2857: How to improve customer interactions with video and AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-and-share-instant-connect-meeting-links" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LAB-2857: How to improve customer interactions with video and AI" class="md-header__button md-logo" aria-label="LAB-2857: How to improve customer interactions with video and AI" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LAB-2857: How to improve customer interactions with video and AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Building the flow: Instant Connect meeting links
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00-introduction/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lab Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../credentials/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Lab credentials
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LAB-2857: How to improve customer interactions with video and AI" class="md-nav__button md-logo" aria-label="LAB-2857: How to improve customer interactions with video and AI" data-md-component="logo">
+      
+  <img src="../template_assets/webexLogo91.png" alt="logo">
+
+    </a>
+    LAB-2857: How to improve customer interactions with video and AI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lab Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lab Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instant Connect overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-activation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instant Connect configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-instantconnectapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instant Connect API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ai-agent-create/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building your Webex AI Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backend preparation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-connectflow-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building the flow: Get customer data from CRM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-connectflow-02-ai-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building the flow: Add the AI Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Building the flow: Instant Connect meeting links
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building the flow: Instant Connect meeting links
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-meeting-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Meeting Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#send-link-to-customer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Send link to customer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#send-link-to-expert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Send link to expert
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-for-non-us-attendees" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECTION FOR NON US ATTENDEES
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-testing-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing the flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../075-fullfillment-flows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fulfillment Flows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../credentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab credentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="create-and-share-instant-connect-meeting-links">Create and share Instant Connect Meeting Links</h1>
+<h2 id="create-meeting-links">Create Meeting Links</h2>
+<p>Similarly to what we did previously in the <strong>Webex Instant Connect API</strong> section , here we will create Webex Instant Connect meeting links.  However, instead of using curl/httpie we will use an <strong>HTTP Request</strong> node. </p>
+<ol>
+<li>
+<p>Go back to Webex Connect, and click on <strong>Services</strong>. Select your POD, access your Flows and then your 'Healthcare Main Flow' Flow. Click on the <strong>Settings</strong> wheel on the top right, and then <strong>Custom Variables</strong>. Find the variable named <em>botToken</em> and paste the value of the BOT token created in the <em>Instant Connect API</em> previous section.</p>
+</li>
+<li>
+<p>Add a new <strong>HTTP Request</strong> node to the canvas, and connect it to the  <strong>Delay</strong> node orange dot. You should find the <strong>Delay</strong> node almost at the end of the Flow:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/ic-links-http-request.png" data-title="HTTP Request node to create Meeting Links" data-desc-position="top"><img alt="HTTP Request node to create Meeting Links" src="../images/ic-links-http-request.png" style="width:600px; display:block; margin:0 auto;"></a></p>
+<p>Configure the node as shown below:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/create-meeting-links.png" data-title="Creating Meeting Links" data-desc-position="top"><img alt="Creating Meeting Links" src="../images/create-meeting-links.png" style="width:900px; display:block; margin:0 auto;"></a></p>
+<p>Here you have some of the values that you can copy-paste:</p>
+<ul>
+<li>Endpoint URL:
+    <div class="highlight"><pre><span></span><code>$(mtg-broker-url)/api/v2/joseencrypt
+</code></pre></div></li>
+<li>
+<p>Body: 
+    </p><div class="highlight"><pre><span></span><code>{
+    "jwt": {
+    "sub": "Video Call with your practitioner - $(n2.inboundWebhook.timestamp)"
+    },
+    "aud": "a4d886b0-979f-4e2c-a958-3e8c14605e51",
+    "provideShortUrls": "true",
+    "verticalType": "hc",
+    "loginUrlForHost": false
+}
+</code></pre></div><p></p>
+<p>With the option <code>verticalType</code> = <code>hc</code> , Instant Connect user interface will be automatically customized for a Healthcare use case.</p>
+</li>
+<li>
+<p>Rename the node to 'Create meeting links' and <strong>Save</strong> it</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Add a <strong>Data Parser</strong> node to the canvas, and connect it to the previous <strong>HTTP Request</strong> node.</p>
+<ul>
+<li>To get the value for <strong>Input: Import Data From</strong>, choose the <code>http.responseBody</code> variable from the <code>Create Meeting Links</code> <strong>HTTP Request</strong> node configured in the previous step:</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/data-parser-ic.png" data-title="Data Parser node setup" data-desc-position="top"><img alt="Data Parser node setup" src="../images/data-parser-ic.png" style="width:800px; display:block; margin:0 auto;"></a></p>
+<blockquote>
+<p><strong>Note:</strong> Node numbers may be different.</p>
+</blockquote>
+<ul>
+<li>
+<p>For the <strong>Sample Body</strong>, you can use the response body you got with curl, ot use the <strong>HTTP Request</strong> Node embedded <em>Test</em> option.</p>
+<p>Here you have on example that you can copy and paste:
+</p><div class="highlight"><pre><span></span><code>{
+    "host": [
+        {
+            "cipher": "eyJwMnMiOiJpNmZta3dp...cWl3ZGw2cjFuSkg0bEUj",
+            "short": "oCVp2LD"
+        }
+    ],
+    "guest": [
+        {
+            "cipher": "eyJwMnMiOiJEQVdaHOBS...RDTvlZ-aLLRdIMSmCwEc",
+            "short": "ckmNR7I"
+        }
+    ],
+    "baseUrl": "https://instant.webex.com/visit/"
+}
+</code></pre></div><p></p>
+</li>
+<li>
+<p>Click on <strong>Parse</strong></p>
+</li>
+<li>
+<p>In this case you do not need to <strong>Select</strong> and <strong>IMPORT</strong> all the variables, <code>$.baseUrl</code>, <code>$.host[0].short</code> and <code>$.guest[0].short</code> are enough.</p>
+<p>Set the <strong>OUTPUT VARIABLE NAMES</strong> as shown below:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/data-parser-ic-vars.png" data-title="Output Variables" data-desc-position="top"><img alt="Output Variables" src="../images/data-parser-ic-vars.png" style="width:600px; display:block; margin:0 auto;"></a></p>
+<p>And <strong>Save</strong> the node.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Next, we will build variables containing the host and guest URLs. We can use again the embedded capabilities of Webex Connect nodes for this:</p>
+<ul>
+<li>
+<p>Edit the  <strong>Data Parse</strong> node we just created, and go to the <strong>Transition Actions (Optional)</strong> tab.</p>
+</li>
+<li>
+<p>Add an Action and set the value for two <strong>Custom Variables</strong>: <code>guestURL</code> and <code>hostURL</code>.</p>
+<p>The URL values are created by concatenating the <code>baseUrl</code> and the values in the <code>short</code> and <code>guest</code> keys on node leave.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/create-vars-ic-links.png" data-title="Variable Creation" data-desc-position="top"><img alt="Variable Creation" src="../images/create-vars-ic-links.png" style="width:800px; display:block; margin:0 auto;"></a></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Node numbers may be different.</p>
+</blockquote>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+<h2 id="send-link-to-customer">Send link to customer</h2>
+<ol>
+<li>
+<p>Connect the Data Parser node to the 'Channel Selection' Branch Node that you should have at the end of the flow:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/channel-selection-node.png" data-title="Channel Selection Node" data-desc-position="top"><img alt="Channel Selection Node" src="../images/channel-selection-node.png" style="width:700px; display:block; margin:0 auto;"></a></p>
+</li>
+<li>
+<p>Double click on the SMS node named 'Send guest URL', and check the variable $(guestURL) is used to send the link to the customer.</p>
+</li>
+</ol>
+<h2 id="send-link-to-expert">Send link to expert</h2>
+<p>Next, we will use the <a href="https://developer.webex.com/docs/api/v1/messages/create-a-message">Webex messaging API</a> to send a message from your Webex bot to the expert.</p>
+<ol>
+<li>
+<p>Choose your expert</p>
+<p>Go back again to <strong>Custom Variables</strong> (under the <strong>Settings</strong> wheel), and type the expert email address. This has to be the email address for a real Webex user account.</p>
+<p>In a real project, normally there will be a process or system in place to choose the best expert for a given customer or interaction. In this case, the expert is a static value.</p>
+<ul>
+<li>
+<p><ins>ATTENDEES WITHOUT A US MOBILE NUMBER</ins></p>
+<p>Because you may have used your regular Webex user account email address for the customer in the previous <strong>Backend Preparation</strong> section, you will need a second one for the expert. If you already have one, use it. If you do not, you can create one in <a href="http://web.webex.com">here</a> (<em>Sign Up</em> option), or if you prefer you can use your admin user (admin-podX@ai-services-lab.wbx.ai).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Add an <strong>HTTP Request</strong> node to the canvas, and connect it to the previous <strong>SMS</strong> node named <em>'Send guest URL'</em>.</p>
+<ul>
+<li>
+<p>Configure the node as shown below:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/http-request-webex.png" data-title="HTTP Request for Webex" data-desc-position="top"><img alt="HTTP Request for Webex" src="../images/http-request-webex.png" style="width:800px; display:block; margin:0 auto;"></a></p>
+<p>Here you have some of the values that you can copy-paste:</p>
+<ul>
+<li>Body:
+    <div class="highlight"><pre><span></span><code>    {
+        "toPersonEmail":"$(expertEmail)",
+        "text":"$(customerName) is waiting for you. Please click on this link to join the video session: $(hostURL)"
+    } 
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>Rename the node to 'Offer host URL to expert' and <strong>Save</strong> it</p>
+</li>
+</ul>
+<p>🎯 Mission accomplished! Learn how to integrate Webex Connect with Instant Connect to create the Instant Connect Meetings Links, and share them with the customer and the expert.</p>
+</li>
+</ol>
+<h2 id="section-for-non-us-attendees">SECTION FOR NON US ATTENDEES</h2>
+<p>If you do not have a US mobile number, you can still test your flow.</p>
+<ol>
+<li>
+<p>Go to the <em>Channel Selection</em> <strong>Branch Node</strong> at the beginning of the Flow, and connect the 'Webex' outcome to the <strong>HTTP Request Node</strong> named <em>Reminder-Webex Channel</em>:</p>
+<blockquote>
+<p>Note: You may need to zoom out and go to the beginning of the flow)</p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/webex-option-1.png" data-title="Webex Option" data-desc-position="top"><img alt="Webex Option" src="../images/webex-option-1.png" style="width:900px; display:block; margin:0 auto;"></a></p>
+<p>The Webex AI Agent has been added in this Webex flow branch for you, you do not need to to it again. Now please go to the end of the flow, and connect the output of the '<em>Send guest URL - Webex</em>' node to the '<em>Offer host URL to expert</em>' node.</p>
+<p>You need to follow some more steps in order to use Webex as the channel for this use case:</p>
+</li>
+<li>
+<p>At the left side Webex Connect menu bar, click on <strong>Assets</strong> and <strong>Integrations</strong> (Save your Flow first!)</p>
+</li>
+<li>
+<p>Click on <strong>Add Integration</strong> and choose <strong>Inbound Webhook</strong></p>
+</li>
+<li>
+<p>Choose a unique name, for example <em>listener_podX</em>, where X is your POD number.</p>
+</li>
+<li>
+<p>Copy the WebHook URL in a safe place (we will use <code>https://hooks.us.webexconnect.io/events/ASKAS3CYE5</code> in this example)</p>
+</li>
+<li>
+<p>Click on the <strong>Paste JSON tab</strong>, and paste:
+    </p><div class="highlight"><pre><span></span><code>{
+    "id": "",
+    "name": "",
+    "targetUrl": "",
+    "resource": "",
+    "event": "",
+    "orgId": "",
+    "createdBy": "",
+    "appId": "",
+    "ownedBy": "",
+    "status": "",
+    "created": "",
+    "actorId": "",
+    "data": {
+        "id": "",
+        "roomId": "",
+        "roomType": "",
+        "personId": "",
+        "personEmail": "",
+        "created": ""
+    }
+}
+</code></pre></div><p></p>
+</li>
+<li>
+<p>Click on <strong>Parse</strong> and <strong>Save</strong></p>
+</li>
+<li>
+<p>Create a Webhook associated to your Bot. This Webhook will be 'listening' to all the messages sent to the Bot</p>
+<ul>
+<li>
+<p>Copy this CURL request:</p>
+<div class="highlight"><pre><span></span><code>curl --request POST \
+--url https://webexapis.com/v1/webhooks \
+--header 'authorization: Bearer YOUR_BOT_TOKEN' \
+--header 'content-type: application/json' \
+--data '{
+"name": "Webex listener PODX",
+"targetUrl": "INBOUND_WEBHOOK_URL",
+"resource": "messages",
+"event": "created"
+}'
+</code></pre></div>
+</li>
+<li>
+<p>Import it into httpie, Bruno or Postman, as you did in the previous section '<em>Backend Peparation</em>'. Here we are showing how to do it with httpie:</p>
+</li>
+<li>
+<p>In <strong>Auth</strong>, replace <em>YOUR_BOT_TOKEN</em> with your bot Token. In the <strong>Body</strong>, replace <em>INBOUND_WEBHOOK_URL</em> with URL for the Inbound Webhook created above (<code>https://hooks.us.webexconnect.io/events/ASKAS3CYE5</code> in this example), and use your POD number:</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/httpie-webhook.png" data-title="Webhook creation" data-desc-position="top"><img alt="Webhook creation" src="../images/httpie-webhook.png" style="width:900px; display:block; margin:0 auto;"></a></p>
+<p>Click <strong>Send</strong>, You should get a response similar to  this: </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">"id"</span><span class="o">:</span><span class="s2">"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1dFQkhPT0svZWEwMmNkOTQtOWRjMy00ODIxLWI3NzUtMzFkYjgxNWIwODk5"</span><span class="p">,</span>
+<span class="s2">"name"</span><span class="o">:</span><span class="s2">"Webex listener PODX"</span><span class="p">,</span>
+<span class="s2">"targetUrl"</span><span class="o">:</span><span class="s2">"https://hooks.us.webexconnect.io/events/ASKAS3CYE5"</span><span class="p">,</span>
+<span class="s2">"resource"</span><span class="o">:</span><span class="s2">"messages"</span><span class="p">,</span>
+<span class="s2">"event"</span><span class="o">:</span><span class="s2">"created"</span><span class="p">,</span>
+<span class="s2">"orgId"</span><span class="o">:</span><span class="s2">"Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi8zMThlODNmYy1mM2FiLTRlZTYtYjdjMS0yODYwOGRmNGI3MTI"</span><span class="p">,</span><span class="s2">"createdBy"</span><span class="o">:</span><span class="s2">"Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMjMyZDQzZS1lZWY3LTRlMTctYjRjZC1mZGUzMDkzYWJiZTA"</span><span class="p">,</span><span class="s2">"appId"</span><span class="o">:</span><span class="s2">"Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh"</span><span class="p">,</span>
+<span class="s2">"ownedBy"</span><span class="o">:</span><span class="s2">"creator"</span><span class="p">,</span>
+<span class="s2">"status"</span><span class="o">:</span><span class="s2">"active"</span><span class="p">,</span>
+<span class="s2">"created"</span><span class="o">:</span><span class="s2">"2025-09-04T13:42:44.239Z"</span><span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p>Go back to <strong>Services</strong>, your POD Service, <strong>Flows</strong>, and Click on your '<em>Healthcare Main Flow</em>' Flow.</p>
+</li>
+<li>
+<p>Find the two <strong>Receive</strong> nodes named '<em>Wait for message on Webhook</em>' (bottom part of the flow, Webex branch) and edit both of them:</p>
+<p>Under <strong>Receive Custom Event</strong>, <strong>Custom Event</strong>, choose the Inbound Webhook created above (<em>listener_podX</em> in this example). Click <strong>Save</strong>.</p>
+<p>Make sure that these two receive nodes green outputs are connected to the next Data Parser node!</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../07-connectflow-02-ai-agent/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Building the flow: Add the AI Agent">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Building the flow: Add the AI Agent
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../09-testing-flow/" class="md-footer__link md-footer__link--next" aria-label="Next: Testing the flow">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Testing the flow
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 Cisco
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.footer", "search.suggest", "content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../template_assets/js/newLoad.js"></script>
+      
+        <script src="../template_assets/js/setInfo.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "fade", "closeEffect": "fade", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
