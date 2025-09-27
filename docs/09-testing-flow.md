@@ -44,7 +44,7 @@ Click on **MAKE LIVE**, add some comments (Optional) and click on **Make Live** 
 
     - <ins>ATTENDEES WITHOUT A US MOBILE NUMBER</ins>
 
-        Type your email address. This has to be the same one you chose as the **Customer** email address in the previous **Backend Preparation** section.
+        Type your email address. This has to be the same one you chose as the **Customer** email address in the previous **Backend Preparation** section. You can always check your customer data [here](https://appointment-management-production-095a.up.railway.app/database.html).
 
         In the _Webex Connect Webhook URL_ input filed, paste your WebHook URL (`https://hooks.us.webexconnect.io/events/TOONJ56GSA` in this example. Click **Submit**.
 
@@ -60,5 +60,7 @@ Now you can interact with the flow, and check how:
 - Video visit is scheduled, and links are sent to customer and expert
 - Customer and expert can join the video session
 
-    You can log in [web.webex.com](https://web.webex.com) to receive the Webex messages.
+    To receive the message for the expert, you will need to log in [web.webex.com](https://web.webex.com) using the email address you chose as _expertEmail_ in your Flow.
+    
+    Attendees without a USA mobile number, will also need to log in as a customer, using the chosen customer email address.
 
