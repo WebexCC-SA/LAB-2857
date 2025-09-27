@@ -12,11 +12,13 @@ On Webex Connect, if you go to **Tools**, **Smart Links**, you will see that a s
 
     ![Smart Link](images/smart-link.jpg){style="width:700px; display:block; margin:0 auto;"}
 
+    Click **Save**.
+
 ## Check flow errors
 
 - Edit all your **SMS** nodes, and choose one of the available numbers in the **From Number** drop-down menu. Choose the same for all nodes.
 
-- Edit all the **Receive** nodes that are connected to an **SMS node**: choose the same number in the **Number** drop-down menu for all of them. Use '\*' as **Keyword**.
+- Edit all the **Receive** nodes that are connected to an **SMS node**: choose the same number in the **Number** drop-down menu that you chose before. Use '\*' as **Keyword**.
 
 > IMPORTANT !! Attendees without a US Mobile Number should skip this next step:
 
@@ -31,7 +33,8 @@ Click on **MAKE LIVE**, add some comments (Optional) and click on **Make Live** 
 
 1. Click on the first _Configure Webhook_ node in the flow, and copy the WebHook URL. We will use `https://hooks.us.webexconnect.io/events/TOONJ56GSA` as an example.
 
-2. Go to ```https://appointment-management-production-095a.up.railway.app/demo-start.html``` (Link [here](https://appointment-management-production-095a.up.railway.app/demo-start.html))
+
+2. Go to [https://appointment-management-production-095a.up.railway.app/demo-start.html](https://appointment-management-production-095a.up.railway.app/demo-start.html) 
 
     - <ins>ATTENDEES WITH A US MOBILE NUMBER</ins>
 
