@@ -49,9 +49,8 @@ curl --request GET \
 
 4. In **Headers**, use you POD number and attendee email. In the request URL (_https://appointment-management-production-095a.up.railway.app/api/customers/search/?mobileNumber=12225556666&email=customerpod4%40email.com_), replace 12225556666 with the customer mobile number, and customerpod4%40email.com with the customer email.
 
-> Note: URL parameters have to be encoded, %40 is the encoded representation of '@'.
 
-5. . Click on send, the response should look like this:
+5. Click on send, the response should look like this:
 
       ```
       {
