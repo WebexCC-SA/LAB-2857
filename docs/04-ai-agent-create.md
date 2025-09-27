@@ -241,7 +241,7 @@ In this section, you will learn how to set up your agent to perform powerful act
 
 ## Fine-tuning your AI Agent
 
-You can test how your AI Agent works before you add it to any Flow. Go back to the **AI Agent Studio**, select your Bot, Click on 💬 **Preview**, and start the conversation with 'Hi'.
+You can test how your AI Agent works before you add it to any Flow. Go back to the **AI Agent Studio**, select your Bot, Click on 💬 **Preview**, then choose **Start a chat**, and start the conversation with 'Hi'.
 
 Appointments can be booked any day in the week, from 9AM to 5PM.
 
