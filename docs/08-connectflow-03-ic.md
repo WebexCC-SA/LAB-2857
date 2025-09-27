@@ -202,13 +202,13 @@ If you do not have a US mobile number, you can still test your flow.
         }'
         ```
 
-    - Import it into httpie, Bruno or Postman, as you did in the previous section '_Backend Peparation_'.
+    - Import it into httpie, Bruno or Postman, as you did in the previous section '_Backend Peparation_'. Here we are showing how to do it with httpie:
 
-    - Replace _YOUR_BOT_TOKEN_ with your bot Token, _INBOUND_WEBHOOK_URL_ with URL for the Inbound Webhook created above (```https://hooks.us.webexconnect.io/events/ASKAS3CYE5``` in this example), and use your POD number:
+    - In **Auth**, replace _YOUR_BOT_TOKEN_ with your bot Token. In the **Body**, replace _INBOUND_WEBHOOK_URL_ with URL for the Inbound Webhook created above (```https://hooks.us.webexconnect.io/events/ASKAS3CYE5``` in this example), and use your POD number:
 
     ![Webhook creation](images/httpie-webhook.png){style="width:900px; display:block; margin:0 auto;"}
     
-    You should get a response similar to  this: 
+    Click **Send**, You should get a response similar to  this: 
 
     ```js
     {"id":"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1dFQkhPT0svZWEwMmNkOTQtOWRjMy00ODIxLWI3NzUtMzFkYjgxNWIwODk5",
@@ -224,7 +224,7 @@ If you do not have a US mobile number, you can still test your flow.
 
 9. Go back to **Services**, your POD Service, **Flows**, and Click on your '_Healthcare Main Flow_' Flow.
 
-10. Find the two **Receive** nodes named '_Wait for message on Webhook_' and edit both of them:
+10. Find the two **Receive** nodes named '_Wait for message on Webhook_' (bottom part of the flow, Webex branch) and edit both of them:
 
     Under **Receive Custom Event**, **Custom Event**, choose the Inbound Webhook created above (_listener_podX_ in this example). Click **Save**.
     
