@@ -2,7 +2,7 @@
 
 ## Create Meeting Links
 
-Similarly to what we did previously in the **Webex Instant Connect API** section , here we will create Webex Instant Connect meeting links.  However, instead of using curl we will use an **HTTP Request** node. 
+Similarly to what we did previously in the **Webex Instant Connect API** section , here we will create Webex Instant Connect meeting links.  However, instead of using curl/httpie we will use an **HTTP Request** node. 
 
 1. Go back to Webex Connect, and click on **Services**. Select your POD, access your Flows and then your 'Healthcare Main Flow' Flow. Click on the **Settings** wheel on the top right, and then **Custom Variables**. Find the variable named _botToken_ and paste the value of the BOT token created in the _Instant Connect API_ previous section.
 
@@ -80,7 +80,7 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
 
     - Edit the  **Data Parse** node we just created, and go to the **Transition Actions (Optional)** tab.
 
-    - Add an Action and create two **Custom Variables**: `guestURL` and `hostURL`.
+    - Add an Action and set the value for two **Custom Variables**: `guestURL` and `hostURL`.
 
         The URL values are created by concatenating the `baseUrl` and the values in the `short` and `guest` keys on node leave.
             
