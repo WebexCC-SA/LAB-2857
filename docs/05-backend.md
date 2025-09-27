@@ -10,6 +10,8 @@ Go to this [link](https://appointment-management-production-095a.up.railway.app/
 
 > NOTE: this attendee email address can be any, it won't be used later in the flow. It is used to keep POD's information isolated: you will have access only to your own customers, other lab attendees won't see your customer data. Do not share this email address with other lab attendees !!
 
+POD numbers are case sensitive!
+
 ## Create a customer
 
 Click **Add New Customer**, type **Name**, **Email** and **Mobile Number**. **Phone** and **Company** are not mandatory and won't be used during the lab, you can add some values for demo purposes.
