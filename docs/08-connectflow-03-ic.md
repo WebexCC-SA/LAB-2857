@@ -148,6 +148,12 @@ If you do not have a US mobile number, you can still test your flow.
 
     You need to follow some more steps in order to use Webex as the channel for this use case:
 
+1. Find the two **AI Agent** nodes in the Webex bottom branch:
+
+    ![Ai Agents for the Webex branch](images/ai-agents-webex.png){style="width:900px; display:block; margin:0 auto;"}
+
+    and edit both of them, by choosing your POD AI Agent in the _Agent_ drop-down menu.
+
 2. At the left side Webex Connect menu bar, click on **Assets** and **Integrations** (Save your Flow first!)
 
 3. Click on **Add Integration** and choose **Inbound Webhook**
