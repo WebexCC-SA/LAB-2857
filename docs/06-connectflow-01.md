@@ -33,7 +33,7 @@ This is the interaction flow:
 
       ![Webex Connect Services](images/services-new.png){style="width:600px; display:block; margin:0 auto;"}
 
-      Select the Services for your POD, and click on **Create a Flow**. From the **Method** drop-down menu, choose _Upload a Flow_, and select the Flow that you downloaded.
+      Select the Services for your POD, click on **Flows** and then on **Create Flow**. From the **Method** drop-down menu, choose _Upload a Flow_, and select the Flow that you downloaded.
       For the Flow name, choose `Healthcare Main Flow`. Click on **Create**.
 
 4. Click on **Create new event**, and choose as **Name** `podX-main-flow` where X is your POD number.
@@ -52,7 +52,7 @@ This is the interaction flow:
 
 6. Click on **Parse** and **Save**
 
-7. Add an **HTTP Request** node to the canvas, and connect it to the first Node **Configure Webhook** . We will use this node to retrieve the customer name from the customers data base.
+7. Add an **HTTP Request** node to the canvas, and connect it to the first Node **Configure Webhook** . We will use this node to retrieve the customer name from the customers data base. You will find this node in the Connect pallette on the right side of the screen, and you can connect it to the **Configure Webhook** node by selecting the green bubble and dragging the line until the **HTTP Request** node. Double-click the node to set it up:
 
       - For **Method** select: `GET`
 
@@ -70,7 +70,7 @@ This is the interaction flow:
 
       - Rename this http request node to something like 'Get Customer Name from CRM' (edit the text at the top of the window, and click the green tick symbol) and **Save**.
 
-8. Add a **Data Parser** node, and connect it to the **HTTP Request Node**. This will allow you to parse the data received from the customer data base to be used later in any node in the flow.
+8. Add a **Data Parser** node, and connect it to the **HTTP Request Node**. This will allow you to parse the data received from the customer data base to be used later in any node in the flow. Double click it to set it up:
 
       - For **Input: Import Data From**: under the **Input Variables** section to the right, select the `http.responseBody` variable from the previous **HTTP Request** node 'Get Customer Name From' configured in the previous step.
 
