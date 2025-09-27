@@ -49,13 +49,17 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
     ![Transaction Action for the AI Agent message](images/receive-transaction-agent-message.png){style="width:800px; display:block; margin:0 auto;"}
 
-    Be sure that the variable node number (97 in this example in `$(n97.receive.message)` ) is the same as the Receive Node number at the bottom left. With these steps, you will be taking the customer SMS message text and sending it back to the AI Agent.
+    Be sure that the variable node number (97 in this example in `$(n97.receive.message)` ) is the same as the Receive Node number at the bottom left. You can access the right value under **Output Variables** on the right.
+    
+    With these steps, you will be taking the customer SMS message text and sending it back to the AI Agent.
+
+    Click on **Save**.
 
 4. Select the **Receive Node** Outcome (green circle), and connect it to the AI Agent Node. You should get something like this:
 
     ![Partial Flow](images/ai-agent-partial-flow.png){style="width:800px; display:block; margin:0 auto;"}
 
-    If you tested now the Flow it would work, but the conversation would never end. We need to add a way to determine that the video visit was scheduled, and move to the next step which is sharing a video with the end customer. You will do it now:
+    If you tested now the Flow it would work, but the conversation would never end. We need to add a way to determine that the video visit was scheduled, and move to the next step which is sharing a video with the end customer. You will do it now in the next section, now it is a good moment to **Save** your Flow!
 
 ## Ending the conversation with the AI Agent
 
@@ -65,7 +69,9 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
     ![Branch Node to check if it is the last message](images/branch-ai-agent.png){style="width:800px; display:block; margin:0 auto;"}
 
-3. Connect this 'Check if AI Agent is done' **Branch Node** to the existing **SMS node** named 'Thanks'. Choose the _Yes_ **Event**.
+    Click **Save**.
+
+3. Connect this 'Check if AI Agent is done' **Branch Node** to the existing **SMS node** named 'Thanks'. Choose the '_Yes_' **Event**.
 
 4. Go back to the 'Check if AI Agent is done' **Branch Node**, and now connect the _None of the above_ **Event** to the 'Agent Message' **SMS Node**. Now, this section of the Flow should look like something like this:
 
@@ -73,7 +79,7 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
     As you can see, we didn’t build this section of the flow in the same order as the nodes appear now, but hopefully this helped you better understand the process.
 
-    Now you only need to add error and time out control, you will do it in the following section:
+    Now you only need to add error and time out control, you will do it in the following section.
 
 ## Controlling response timeouts and session errors
 
@@ -87,7 +93,7 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
     ![Closing Session](images/ai-agent-close-session.png){style="width:800px; display:block; margin:0 auto;"}
 
-    You gave to choose your POD bot.
+    You gave to choose your POD bot, and node numbers may be different for you.
 
 4. Connect the last 'Time Out' SMS node (green bubble) that you created to this 'Closing Session' **AI Agent Node**.
 
