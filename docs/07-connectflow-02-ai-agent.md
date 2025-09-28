@@ -93,7 +93,7 @@ In this section you will learn how to add a Webex AI agent into any Connect Flow
 
     ![Closing Session](images/ai-agent-close-session.png){style="width:800px; display:block; margin:0 auto;"}
 
-    You gave to choose your POD bot, and node numbers may be different for you.
+    You have to choose your POD bot, and node numbers may be different for you.
 
 4. Connect the last 'Time Out' SMS node (green bubble) that you created to this 'Closing Session' **AI Agent Node**.
 

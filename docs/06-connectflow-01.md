@@ -23,7 +23,7 @@ This is the interaction flow:
 
 1. Download [this flow](Healthcare-Main-Flow.workflow).
 
-2. Log in Control Hub [(https://admin.webex.com)](https://admin.webex.com) with you Webex Contact Center tenant administrator credentials, go to **Services**, **Contact Center**:
+2. Log in Control Hub [(https://admin.webex.com)](https://admin.webex.com) with your Webex Contact Center tenant administrator credentials, go to **Services**, **Contact Center**:
 
       ![Contact Center Administration](images/cc-admin.png){style="width:150px; display:block; margin:0 auto;"}
 
@@ -110,7 +110,7 @@ This is the interaction flow:
          
          Copy/paste the JSON into the **Sample Body (optional) / PROVIDE SAMPLE INPUT** field, and click **PARSE**.
          
-         Under **SELECT OUTPUT VARIABLES**, choose `$.matchingCustomers[0].name` anc click **Import**
+         Under **SELECT OUTPUT VARIABLES**, choose `$.matchingCustomers[0].name` and click **Import**
                   
       - Go ahead and give this variable the 'Output Variable Name' `customerName`
 

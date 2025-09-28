@@ -45,9 +45,9 @@ Similarly to what we did previously in the **Webex Instant Connect API** section
 
     > **Note:** Node numbers may be different.
 
-    - For the **Sample Body**, you can use the response body you got with curl, ot use the **HTTP Request** Node embedded _Test_ option.
+    - For the **Sample Body**, you can use the response body you got with curl, or use the **HTTP Request** Node embedded _Test_ option.
 
-        Here you have on example that you can copy and paste:
+        Here you have one example that you can copy and paste:
         ```
         {
             "host": [
@@ -144,7 +144,7 @@ If you do not have a US mobile number, you can still test your flow.
 
     ![Webex Option](images/webex-option-1.png){style="width:900px; display:block; margin:0 auto;"}
 
-    The Webex AI Agent has been added in this Webex flow branch for you, you do not need to to it again. Now please go to the end of the flow, and connect the output of the '_Send guest URL - Webex_' node to the '_Offer host URL to expert_' node.
+    The Webex AI Agent has been added in this Webex flow branch for you, you do not need to do it again. Now please go to the end of the flow, and connect the output of the '_Send guest URL - Webex_' node to the '_Offer host URL to expert_' node.
 
     You need to follow some more steps in order to use Webex as the channel for this use case:
 
@@ -208,7 +208,7 @@ If you do not have a US mobile number, you can still test your flow.
         }'
         ```
 
-    - Import it into httpie, Bruno or Postman, as you did in the previous section '_Backend Peparation_'. Here we are showing how to do it with httpie:
+    - Import it into httpie, Bruno or Postman, as you did in the previous section '_Backend Preparation_'. Here we are showing how to do it with httpie:
 
     - In **Auth**, replace _YOUR_BOT_TOKEN_ with your bot Token. In the **Body**, replace _INBOUND_WEBHOOK_URL_ with URL for the Inbound Webhook created above (```https://hooks.us.webexconnect.io/events/ASKAS3CYE5``` in this example), and use your POD number:
 

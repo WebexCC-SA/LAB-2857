@@ -2,7 +2,7 @@
 
 One of the objectives of this lab is to demonstrate how Webex Connect can retrieve and update relevant business information from backend systems such as databases, CRMs or EMRs.
 
-You have access to a mock up database for every POD where you can provision your own customers.
+You have access to a mockup database for every POD where you can provision your own customers.
 
 ## Access your Customer Database
 

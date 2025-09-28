@@ -4,7 +4,7 @@ In this section you will learn how to create an Autonomous Webex AI Agent.
 
 ## Agent Creation
 
-1. Log in Control Hub [(https://admin.webex.com)](https://admin.webex.com) with you **Webex Contact Center tenant** administrator credentials, go to **Services**, **Contact Center**:
+1. Log in Control Hub [(https://admin.webex.com)](https://admin.webex.com) with your **Webex Contact Center tenant** administrator credentials, go to **Services**, **Contact Center**:
 
     ![Contact Center Administration](images/cc-admin.png){style="width:150px; display:block; margin:0 auto;"}
 
@@ -103,7 +103,7 @@ In this section, you will learn how to set up your agent to perform powerful act
 
 3. Click on **new input entity**
 
-    With entities, we will ensure that the AI Agent gather all the needed information. For this action, we need to collect the preferred date and time, and also the PodId.
+    With entities, we will ensure that the AI Agent gathers all the needed information. For this action, we need to collect the preferred date and time, and also the PodId.
 
     > **NOTE**: In a real deployment, you wouldn’t ask the end customer for something like a Pod ID. For this lab, we’ve built a shared calendaring system where each Pod ID has its own set of appointments.
     
